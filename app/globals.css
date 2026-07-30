@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  /* Color tokens — from design brief, no deviation */
+  --color-bg: #f5f5f5;
+  --color-card: #ffffff;
+  --color-ink: #111111;
+  --color-ink-soft: #666666;
+  --color-border: #e5e5e5;
+  --color-accent: #2563eb;
+  --color-accent-hover: #1d4ed8;
+  --color-success: #22c55e;
+
+  /* Type */
+  --font-display: var(--font-geist), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* Motion */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-out-soft: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Radii */
+  --radius-card: 1.25rem;
+  --radius-pill: 999px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root.theme-auto {
+    --color-bg: #0a0a0b;
+    --color-card: #141416;
+    --color-ink: #f5f5f5;
+    --color-ink-soft: #9a9a9a;
+    --color-border: #232326;
+  }
+}
+
+:root.dark {
+  --color-bg: #0a0a0b;
+  --color-card: #141416;
+  --color-ink: #f5f5f5;
+  --color-ink-soft: #9a9a9a;
+  --color-border: #232326;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+html {
+  background: var(--color-bg);
+  scroll-behavior: auto;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition:
+    background-color 0.4s var(--ease-out-soft),
+    color 0.4s var(--ease-out-soft);
+}
+
+/* Hide native cursor only where custom cursor is active (desktop, fine pointer) */
+@media (hover: hover) and (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active a,
+  body.custom-cursor-active button {
+    cursor: none;
+  }
+}
+
+::selection {
+  background: var(--color-accent);
+  color: white;
+}
+
+/* Hides the scrollbar while keeping the element scrollable — used as a
+   fallback so the bottom dock can scroll horizontally on very narrow
+   screens instead of overflowing or wrapping. */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Subtle noise texture overlay */
+.noise-layer {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* Focus ring — accessible, on-brand */
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ink-fill text effect base (see AnimatedStatement component) */
+.ink-fill-text {
+  background-image: linear-gradient(
+    to right,
+    var(--color-ink) 50%,
+    var(--color-border) 50%
+  );
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  background-position: left center;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-border);
+}
