@@ -82,35 +82,25 @@ export const SKILL_ICON_MAP: Record<string, string> = {
 
 export const EXPERIENCE_ITEMS: ExperienceItem[] = [
   {
-    company: "Tech Innovators Inc.",
-    role: "Full Stack Developer",
-    duration: "Jan 2024 — Present",
+    company: "Mannlöwe Information Services",
+    role: "Full Stack AI Engineer",
+    duration: "Jan 2025 — Present",
     achievements: [
       "Led migration of a legacy dashboard to Next.js, cutting median load time by 40%",
       "Built and shipped a real-time notifications system used by 10k+ daily active users",
       "Mentored two junior engineers on TypeScript and component architecture",
     ],
-    technologies: ["React", "Next.js", "TypeScript", "Node.js", "PostgreSQL"],
+    technologies: ["React", "Next.js", "TypeScript", "Node.js", "Express", "MongoDB", "PostgreSQL"],
   },
   {
-    company: "Startup Labs",
-    role: "Frontend Developer",
-    duration: "Jun 2022 — Dec 2023",
+    company: "Shekru Labs",
+    role: "Software Developer",
+    duration: "Oct 2022 — Dec 2024",
     achievements: [
       "Rebuilt the marketing site design system, reducing CSS bundle size by 35%",
       "Implemented CI/CD pipelines that cut deployment time from 20 minutes to under 4",
       "Collaborated directly with design to ship a11y-compliant components company-wide",
     ],
-    technologies: ["React", "Redux", "Tailwind CSS", "Express", "MongoDB"],
-  },
-  {
-    company: "Freelance",
-    role: "Web Developer",
-    duration: "2021 — 2022",
-    achievements: [
-      "Delivered 8 client websites end-to-end, from scoping to deployment",
-      "Set up analytics and SEO foundations that grew organic traffic 3x for a client",
-    ],
-    technologies: ["JavaScript", "React", "Git", "AWS"],
+    technologies: ["JavaScript", "React", "Redux", "Tailwind CSS", "Express", "Node.js", "MongoDB"],
   },
 ];
