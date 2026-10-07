@@ -14,24 +14,22 @@ const MAX_WAIT_MS = 900;
  * delay perceived performance. Skipped entirely under reduced motion.
  */
 export function LoadingScreen() {
-  const [visible, setVisible] = useState(true);
+  const [dismissed, setDismissed] = useState(false);
   const reducedMotion = useReducedMotion();
+  const visible = !dismissed && !reducedMotion;
 
   useEffect(() => {
-    if (reducedMotion) {
-      setVisible(false);
-      return;
-    }
+    if (reducedMotion) return;
 
     const start = performance.now();
-    let dismissed = false;
+    let done = false;
 
     const dismiss = () => {
-      if (dismissed) return;
-      dismissed = true;
+      if (done) return;
+      done = true;
       const elapsed = performance.now() - start;
       const remaining = Math.max(0, MIN_VISIBLE_MS - elapsed);
-      window.setTimeout(() => setVisible(false), remaining);
+      window.setTimeout(() => setDismissed(true), remaining);
     };
 
     if (document.readyState === "complete") {

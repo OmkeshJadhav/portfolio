@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState, type RefObject, type MouseEvent as ReactMouseEvent } from "react";
+import { useRef, useState, type MouseEvent as ReactMouseEvent } from "react";
 import { createPortal } from "react-dom";
 import {
   Mail,
@@ -20,9 +20,11 @@ import {
   SiLeetcode,
 } from "react-icons/si";
 import { FaLinkedin } from "react-icons/fa";
+import type { IconType } from "react-icons";
 import { DOCK_LINKS } from "@/constants";
 import { TECH_COLORS } from "@/constants/icon-colors";
 import { cn, clamp } from "@/lib/utils";
+import { useIsClient } from "@/hooks/use-media-query";
 
 const ICONS: Record<string, LucideIcon> = {
   Mail,
@@ -36,7 +38,7 @@ const ICONS: Record<string, LucideIcon> = {
   NotebookPen,
 };
 
-const BRAND_DOCK_ICONS: Record<string, any> = {
+const BRAND_DOCK_ICONS: Record<string, IconType> = {
   Github: SiGithub,
   Linkedin: FaLinkedin,
   Twitter: SiX,
@@ -54,16 +56,15 @@ const INFLUENCE_RADIUS = 110;
  */
 export function BottomDock() {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [mouseX, setMouseX] = useState<number | null>(null);
+  const [sizes, setSizes] = useState<number[] | null>(null);
   const [tooltip, setTooltip] = useState<{ label: string; x: number; y: number } | null>(null);
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => setMounted(true), []);
+  const mounted = useIsClient();
 
   const handleMouseMove = (event: ReactMouseEvent<HTMLDivElement>) => {
-    const rect = containerRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    setMouseX(event.clientX - rect.left);
+    const container = containerRef.current;
+    if (!container) return;
+    const mouseX = event.clientX - container.getBoundingClientRect().left;
+    setSizes(Array.from(container.children as HTMLCollectionOf<HTMLElement>, (icon) => computeSize(icon, mouseX)));
   };
 
   const handleIconEnter = (label: string) => (event: ReactMouseEvent<HTMLAnchorElement>) => {
@@ -76,7 +77,7 @@ export function BottomDock() {
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}
-        onMouseLeave={() => setMouseX(null)}
+        onMouseLeave={() => setSizes(null)}
         className="no-scrollbar flex max-w-full items-end gap-1.5 overflow-x-auto overflow-y-visible rounded-[28px] border px-2.5 py-2.5 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:gap-2 sm:px-3"
         style={{
           backgroundColor: "color-mix(in srgb, var(--color-card) 82%, transparent)",
@@ -86,7 +87,7 @@ export function BottomDock() {
         {DOCK_LINKS.map((link, index) => {
           const BrandIcon = BRAND_DOCK_ICONS[link.icon];
           const LucideIcon = ICONS[link.icon] ?? Mail;
-          const size = computeSize(containerRef, index, mouseX);
+          const size = sizes?.[index] ?? BASE_SIZE;
           
           // Get brand color based on link label
           let iconColor = "var(--color-ink)";
@@ -154,21 +155,10 @@ export function BottomDock() {
 }
 
 /**
- * Distance-based size falloff, evaluated per icon on every mouse move.
- * Kept outside React state to avoid re-render thrash; called during render
- * is acceptable here since it's a pure, cheap calculation.
+ * Distance-based size falloff for one icon, evaluated on every mouse move
+ * from the icon's layout position (offsetLeft is unaffected by the scaling).
  */
-function computeSize(
-  containerRef: RefObject<HTMLDivElement | null>,
-  index: number,
-  mouseX: number | null
-): number {
-  if (mouseX === null || !containerRef.current) return BASE_SIZE;
-
-  const children = containerRef.current.children;
-  const target = children[index] as HTMLElement | undefined;
-  if (!target) return BASE_SIZE;
-
+function computeSize(target: HTMLElement, mouseX: number): number {
   const iconCenter = target.offsetLeft + target.offsetWidth / 2;
   const distance = Math.abs(mouseX - iconCenter);
   const falloff = clamp(1 - distance / INFLUENCE_RADIUS, 0, 1);

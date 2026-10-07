@@ -1,10 +1,11 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import type { Project } from "@/types";
 import { ProjectThumbnail } from "./ProjectThumbnail";
 import { lerp, clamp } from "@/lib/utils";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useMediaQuery } from "@/hooks/use-media-query";
 
 interface FloatingPreviewProps {
   project: Project | null;
@@ -25,13 +26,9 @@ const OFFSET_Y = -HEIGHT / 2;
  */
 export function FloatingPreview({ project, projectIndex }: FloatingPreviewProps) {
   const panelRef = useRef<HTMLDivElement>(null);
-  const [enabled, setEnabled] = useState(false);
   const reducedMotion = useReducedMotion();
-
-  useEffect(() => {
-    const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    setEnabled(supportsFinePointer && !reducedMotion);
-  }, [reducedMotion]);
+  const supportsFinePointer = useMediaQuery("(hover: hover) and (pointer: fine)");
+  const enabled = supportsFinePointer && !reducedMotion;
 
   useEffect(() => {
     if (!enabled) return;

@@ -90,7 +90,9 @@ function topicFromFilename(file) {
 function langFromFilename(filename) {
   const ext = filename?.match(/\.([a-z0-9]+)$/i)?.[1]?.toLowerCase();
   const map = { js: "javascript", mjs: "javascript", cjs: "javascript", jsx: "jsx", ts: "typescript",
-    tsx: "tsx", css: "css", scss: "scss", html: "html", json: "json", sh: "bash", sql: "sql", md: "markdown" };
+    tsx: "tsx", css: "css", scss: "scss", html: "html", json: "json", sh: "bash", sql: "sql", md: "markdown",
+    // A snippet labelled with an image/asset name is a drawing of that file, not code.
+    png: "text", jpg: "text", jpeg: "text", gif: "text", svg: "text", webp: "text", txt: "text" };
   return ext ? map[ext] ?? null : null;
 }
 

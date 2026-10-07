@@ -68,7 +68,7 @@ export function ContactForm() {
         <CheckCircle2 className="h-8 w-8" style={{ color: "var(--color-success)" }} strokeWidth={1.75} />
         <p className="font-medium">Message sent — thanks for reaching out.</p>
         <p className="text-sm" style={{ color: "var(--color-ink-soft)" }}>
-          I'll get back to you as soon as I can.
+          I&apos;ll get back to you as soon as I can.
         </p>
         <button
           type="button"

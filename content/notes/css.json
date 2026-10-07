@@ -5879,8 +5879,8 @@
                         {
                           "type": "code",
                           "code": "+-------------------------+\n| Home | Search | Settings |\n+-------------------------+",
-                          "lang": "sql",
-                          "filename": "mySprite.sql"
+                          "lang": "text",
+                          "filename": "mySprite.png"
                         },
                         {
                           "type": "code",

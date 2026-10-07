@@ -21,10 +21,11 @@ export function NotesToolbar({ containerId, total }: NotesToolbarProps) {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Filter questions by title + answer text; hide groups left empty.
-  useEffect(() => {
+  const search = (value: string) => {
+    setQuery(value);
     const container = document.getElementById(containerId);
     if (!container) return;
-    const terms = query.toLowerCase().split(/\s+/).filter(Boolean);
+    const terms = value.toLowerCase().split(/\s+/).filter(Boolean);
     let count = 0;
     container.querySelectorAll<HTMLElement>("[data-note-question]").forEach((el) => {
       el.dataset.searchText ??= (el.textContent ?? "").toLowerCase();
@@ -36,7 +37,7 @@ export function NotesToolbar({ containerId, total }: NotesToolbarProps) {
       group.hidden = !group.querySelector("[data-note-question]:not([hidden])");
     });
     setMatches(count);
-  }, [query, containerId]);
+  };
 
   // Open the question named in the URL hash — on load and on in-page links.
   useEffect(() => {
@@ -94,14 +95,14 @@ export function NotesToolbar({ containerId, total }: NotesToolbarProps) {
             ref={inputRef}
             type="search"
             value={query}
-            onChange={(event) => setQuery(event.target.value)}
+            onChange={(event) => search(event.target.value)}
             placeholder={`Search ${total} questions…`}
             className="h-full min-w-0 flex-1 bg-transparent text-sm outline-none placeholder:text-[var(--color-ink-soft)] [&::-webkit-search-cancel-button]:hidden"
           />
           {query ? (
             <button
               type="button"
-              onClick={() => setQuery("")}
+              onClick={() => search("")}
               aria-label="Clear search"
               data-cursor="pointer"
               className="flex h-6 w-6 items-center justify-center rounded-full"

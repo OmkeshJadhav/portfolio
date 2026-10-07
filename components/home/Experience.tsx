@@ -11,12 +11,13 @@ import {
   SiExpress,
   SiDocker,
 } from "react-icons/si";
+import type { IconType } from "react-icons";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { EXPERIENCE_ITEMS } from "@/constants";
 import { TECH_COLORS } from "@/constants/icon-colors";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const BRAND_ICONS: Record<string, any> = {
+const BRAND_ICONS: Record<string, IconType> = {
   React: SiReact,
   "Next.js": SiNextdotjs,
   TypeScript: SiTypescript,

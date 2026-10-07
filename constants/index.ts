@@ -19,7 +19,7 @@ export const DOCK_LINKS: DockLink[] = [
   { id: "twitter", label: "Twitter / X", href: "https://x.com/omkeshjadhav", icon: "Twitter", external: true },
   { id: "leetcode", label: "LeetCode", href: "https://leetcode.com/omkeshjadhav", icon: "Code2", external: true },
   { id: "medium", label: "Medium", href: "https://medium.com/@omkeshjadhav", icon: "BookOpen", external: true },
-  { id: "blog", label: "Blog", href: "/blog", icon: "PenLine" },
+  { id: "blog", label: "Blog", href: "/#blogs", icon: "PenLine" },
   { id: "notes", label: "Notes", href: "/notes", icon: "NotebookPen" },
 ];
 

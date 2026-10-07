@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { GiArrowCursor } from "react-icons/gi";
 import { useReducedMotion } from "@/hooks/use-reduced-motion";
+import { useMediaQuery } from "@/hooks/use-media-query";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { lerp } from "@/lib/utils";
 
@@ -32,16 +33,15 @@ export function CustomCursor() {
   const dot4Ref = useRef<HTMLDivElement>(null);
   const dot5Ref = useRef<HTMLDivElement>(null);
   const dot6Ref = useRef<HTMLDivElement>(null);
-  const [enabled, setEnabled] = useState(false);
   const [isPointer, setIsPointer] = useState(false);
   const reducedMotion = useReducedMotion();
+  const supportsFinePointer = useMediaQuery("(hover: hover) and (pointer: fine)");
+  const enabled = supportsFinePointer && !reducedMotion;
   const activeSection = useActiveSection();
 
   useEffect(() => {
-    const supportsFinePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
-    setEnabled(supportsFinePointer && !reducedMotion);
-    document.body.classList.toggle("custom-cursor-active", supportsFinePointer && !reducedMotion);
-  }, [reducedMotion]);
+    document.body.classList.toggle("custom-cursor-active", enabled);
+  }, [enabled]);
 
   useEffect(() => {
     if (!enabled) return;

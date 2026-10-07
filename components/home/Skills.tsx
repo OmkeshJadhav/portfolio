@@ -30,6 +30,7 @@ import {
   SiDocker,
   SiGit,
 } from "react-icons/si";
+import type { IconType } from "react-icons";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { SKILLS, SKILL_ICON_MAP } from "@/constants";
 import { TECH_COLORS } from "@/constants/icon-colors";
@@ -51,7 +52,7 @@ const ICONS: Record<string, LucideIcon> = {
   GitBranch,
 };
 
-const BRAND_ICONS: Record<string, any> = {
+const BRAND_ICONS: Record<string, IconType> = {
   React: SiReact,
   "Next.js": SiNextdotjs,
   TypeScript: SiTypescript,

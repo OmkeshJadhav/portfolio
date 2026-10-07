@@ -8,7 +8,7 @@ import Image from "next/image";
  */
 export function NameBadge() {
   const scrollToTop = () => {
-    const lenis = (window as any).__lenis;
+    const lenis = window.__lenis;
     if (lenis) {
       lenis.scrollTo(0, { duration: 1.2 });
     } else {

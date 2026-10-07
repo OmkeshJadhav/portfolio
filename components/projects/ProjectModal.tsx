@@ -1,11 +1,12 @@
 "use client";
 
-import { useEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { createPortal } from "react-dom";
 import { X, Github, ArrowUpRight } from "lucide-react";
 import type { Project } from "@/types";
 import { ProjectThumbnail } from "./ProjectThumbnail";
 import { useFocusTrap } from "@/hooks/use-focus-trap";
+import { useIsClient } from "@/hooks/use-media-query";
 
 interface ProjectModalProps {
   project: Project | null;
@@ -14,11 +15,10 @@ interface ProjectModalProps {
 }
 
 export function ProjectModal({ project, index, onClose }: ProjectModalProps) {
-  const [mounted, setMounted] = useState(false);
+  const mounted = useIsClient();
   const dialogRef = useRef<HTMLDivElement>(null);
   const isOpen = project !== null;
 
-  useEffect(() => setMounted(true), []);
   useFocusTrap(dialogRef, isOpen, onClose);
 
   useEffect(() => {
