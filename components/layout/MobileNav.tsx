@@ -1,6 +1,8 @@
 "use client";
 
 import { useRef, useState } from "react";
+import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { NAV_SECTIONS } from "@/constants";
 import { useActiveSection } from "@/hooks/use-active-section";
@@ -17,11 +19,18 @@ export function MobileNav() {
   const [open, setOpen] = useState(false);
   const panelRef = useRef<HTMLDivElement>(null);
   const active = useActiveSection();
+  const pathname = usePathname();
+  const router = useRouter();
+  const onHome = pathname === "/";
 
   useFocusTrap(panelRef, open, () => setOpen(false));
 
   const scrollTo = (id: string) => {
     setOpen(false);
+    if (!onHome) {
+      router.push(`/#${id}`);
+      return;
+    }
     const el = document.getElementById(id);
     if (!el) return;
     const lenis = window.__lenis;
@@ -79,13 +88,23 @@ export function MobileNav() {
             type="button"
             data-cursor="pointer"
             onClick={() => scrollTo(section.id)}
-            aria-current={section.id === active ? "true" : undefined}
+            aria-current={onHome && section.id === active ? "true" : undefined}
             className="py-3 font-display text-3xl font-semibold tracking-tight transition-colors duration-200"
-            style={{ color: section.id === active ? "var(--color-accent)" : "var(--color-ink)" }}
+            style={{ color: onHome && section.id === active ? "var(--color-accent)" : "var(--color-ink)" }}
           >
             {section.label}
           </button>
         ))}
+        <Link
+          href="/notes"
+          onClick={() => setOpen(false)}
+          data-cursor="pointer"
+          aria-current={pathname.startsWith("/notes") ? "page" : undefined}
+          className="py-3 font-display text-3xl font-semibold tracking-tight transition-colors duration-200"
+          style={{ color: pathname.startsWith("/notes") ? "var(--color-accent)" : "var(--color-ink)" }}
+        >
+          Notes
+        </Link>
       </div>
     </div>
   );

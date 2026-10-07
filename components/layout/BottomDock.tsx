@@ -11,6 +11,7 @@ import {
   Code2,
   BookOpen,
   PenLine,
+  NotebookPen,
   type LucideIcon,
 } from "lucide-react";
 import {
@@ -32,6 +33,7 @@ const ICONS: Record<string, LucideIcon> = {
   Code2,
   BookOpen,
   PenLine,
+  NotebookPen,
 };
 
 const BRAND_DOCK_ICONS: Record<string, any> = {

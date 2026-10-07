@@ -9,10 +9,10 @@ import {
   type LucideIcon,
 } from "lucide-react";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ABOUT_INTRO, ABOUT_INFO_CARDS } from "@/constants";
+import { ABOUT_INTRO, ABOUT_INFO_CARDS, type AboutInfoCard } from "@/constants";
 import { useScrollReveal } from "@/hooks/use-scroll-reveal";
 
-const ICONS: Record<string, LucideIcon> = {
+const ICONS: Record<AboutInfoCard["icon"], LucideIcon> = {
   Briefcase,
   Calendar,
   MapPin,

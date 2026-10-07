@@ -144,3 +144,33 @@ body {
   -webkit-text-fill-color: transparent;
   color: var(--color-border);
 }
+
+/* Notes code blocks — Shiki emits both themes as CSS variables
+   (lib/highlight.ts); pick one per the .dark class. */
+.note-code pre.shiki {
+  margin: 0;
+  overflow-x: auto;
+  padding: 1rem 1.25rem;
+  font-size: 13px;
+  line-height: 1.65;
+  tab-size: 4;
+  background-color: var(--shiki-light-bg);
+}
+
+.note-code pre.shiki span {
+  color: var(--shiki-light);
+}
+
+:root.dark .note-code pre.shiki {
+  background-color: var(--shiki-dark-bg);
+}
+
+:root.dark .note-code pre.shiki span {
+  color: var(--shiki-dark);
+}
+
+/* Closed answers don't need layout until opened. */
+[data-note-question] {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 72px;
+}

@@ -20,6 +20,7 @@ export const DOCK_LINKS: DockLink[] = [
   { id: "leetcode", label: "LeetCode", href: "https://leetcode.com/omkeshjadhav", icon: "Code2", external: true },
   { id: "medium", label: "Medium", href: "https://medium.com/@omkeshjadhav", icon: "BookOpen", external: true },
   { id: "blog", label: "Blog", href: "/blog", icon: "PenLine" },
+  { id: "notes", label: "Notes", href: "/notes", icon: "NotebookPen" },
 ];
 
 export const SKILLS: Skill[] = [

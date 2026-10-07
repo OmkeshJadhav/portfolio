@@ -1,5 +1,6 @@
 "use client";
 
+import { usePathname } from "next/navigation";
 import { NAV_SECTIONS } from "@/constants";
 import { useActiveSection } from "@/hooks/use-active-section";
 import { cn } from "@/lib/utils";
@@ -11,6 +12,7 @@ import { cn } from "@/lib/utils";
  */
 export function RightNav() {
   const active = useActiveSection();
+  const pathname = usePathname();
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -22,6 +24,9 @@ export function RightNav() {
       el.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  // Tracks the home page's sections — nothing to track on other routes.
+  if (pathname !== "/") return null;
 
   return (
     <nav

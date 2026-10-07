@@ -1,0 +1,1302 @@
+{
+  "slug": "interview-coding-questions",
+  "title": "Interview Coding Questions",
+  "order": 3.2,
+  "source": "3.2 Interview Coding Questions.docx",
+  "questionCount": 41,
+  "sections": [
+    {
+      "id": "string",
+      "title": "String",
+      "subsections": [
+        {
+          "id": "string-intro",
+          "title": null,
+          "questions": [
+            {
+              "id": "reverses-a-string-write-a-function-that-returns-the-reverse",
+              "title": "Reverses a string : Write a function that returns the reverse of a string.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function reverseString(str) {\n   // Step 1: Convert the string to an array using split()\n   let strArray = str.split(\"\"); // \"hello\" becomes [\"h\", \"e\", \"l\", \"l\", \"o\"]   ---> You can also use spread operator in place of .split\n\n   // Step 2: Reverse the array using reverse()\n   let reversedArray = strArray.reverse(); // [\"h\", \"e\", \"l\", \"l\", \"o\"] becomes [\"o\", \"l\", \"l\", \"e\", \"h\"]\n\n   // Step 3: Join the reversed array back into a string using join()\n   let reversedStr = reversedArray.join(\"\"); // [\"o\", \"l\", \"l\", \"e\", \"h\"] becomes \"olleh\"\n\n   // Step 4: Return the reversed string\n   return reversedStr;\n}\n\n // Example usage:\nconsole.log(reverseString(\"hello\")); // Output: \"olleh\"",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "reverses-a-string-without-inbuilt-methods-write-a-function-t",
+              "title": "Reverses a string without inbuilt methods : Write a function that reverses a string without using any inbuilt methods.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "let reversedStr = \"\"\n\nfunction stringReversal(str){\n   for(let i = str.length-1; i >= 0; i--){\n       reversedStr += str[i]\n   }\n   return reversedStr\n}\n\nlet reveredString = stringReversal(\"Omkesh\")\nconsole.log(reveredString);",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "reverse-the-order-of-words-write-a-function-to-reverse-the-o",
+              "title": "Reverse the order of words : Write a function to reverse the order of words in a given sentence.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function reverseWords(sentence){\n   let words = sentence.split(\" \")\n   let reversedWords = words.reverse()\n   let reversedSentence = reversedWords.join(\" \")\n   return reversedSentence\n}\n\nlet str = \"Hello World\"\nconsole.log(reverseWords(str));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "palindrome-write-a-function-to-check-if-a-string-is-a-palind",
+              "title": "Palindrome : Write a function to check if a string is a Palindrome i.e. it reads the same forwards and backwards.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function isPalindrome(str) {\n   // Step 1: Convert the string to lowercase to make the check case-insensitive\n   str = str.toLowerCase();\n\n    // Step 2: Reverse the string\n   let reversedStr = str.split(\"\").reverse().join(\"\");\n\n    // Step 3: Compare the original string with the reversed string\n   if (str === reversedStr) {\n       return `The string is palindrome`\n   } else {\n       return `The string is not palindrome`\n   }\n}\n\n// Example usage:\nconsole.log(isPalindrome(\"Madam\")); // The string is palindrome\nconsole.log(isPalindrome(\"Racecar\")); // The string is palindrome\nconsole.log(isPalindrome(\"hello\")); // The string is not palindrome",
+                  "lang": "javascript"
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Other Way"
+                    }
+                  ]
+                },
+                {
+                  "type": "code",
+                  "code": "let myStr = \"hello\"\n\nfunction isPalindrome(str) {\n str = str.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();\n   return str === str.split('').reverse().join('');\n}\n\nisPalindrome(myStr)\n\nmodule.exports = isPalindrome;",
+                  "lang": "javascript"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Cleaning the string: First, we remove all non-alphanumeric characters (spaces, punctuation, etc.) using a regular expression ("
+                        },
+                        {
+                          "text": "/[^a-zA-Z0-9]/g",
+                          "code": true
+                        },
+                        {
+                          "text": "). Then, we convert the string to lowercase to handle case insensitivity."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Checking for palindrome: We compare the cleaned string with its reverse. If they are the same, the function returns "
+                        },
+                        {
+                          "text": "true",
+                          "code": true
+                        },
+                        {
+                          "text": " (indicating it's a palindrome); otherwise, it returns "
+                        },
+                        {
+                          "text": "false",
+                          "code": true
+                        },
+                        {
+                          "text": "."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "anagrams-write-a-function-that-checks-whether-two-strings-ar",
+              "title": "Anagrams : Write a function that checks whether two strings are anagrams or not.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Approach 1 : Using sort - Optimized way",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function isAnagram(str1, str2){\n   str1 = str1.toLowerCase()\n   str2 = str2.toLowerCase()\n   if (str1.length == str2.length){\n       let sortedStr1 = str1.split(\"\").sort().join(\"\")\n       let sortedStr2 = str2.split(\"\").sort().join(\"\")\n\n       if (sortedStr1 === sortedStr2) {\n           return true\n       } else {\n           return false\n       }\n   } else {\n       return false\n   }\n}\n\nconsole.log(isAnagram(\"silent\", \"listen\"));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Approach 2 : Using loop - Expensive",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function isAnagram(str1, str2){\n   str1 = str1.toLowerCase()\n   str2 = str2.toLowerCase()\n   if (str1.length == str2.length){\n       for(let char of str1){\n           if(str2.includes(char)){\n               continue  // Yes? Continue to check the next char;\n           } else {\n               false\n           }\n       }\n       // Complete loop has run, that means all the chars in str1 & str2 match;\n       // Hence, they are an Anagram.\n       return true\n   } else {\n       // Length is NOT equal\n       return false\n   }\n}\n\nconsole.log(isAnagram(\"silent\", \"listen\"));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "number-of-vowels-and-consonants-write-a-function-that-return",
+              "title": "Number of vowels and consonants : Write a function that returns the number of vowels and consonants in a string.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function countVowels(str) {\n   // Define the vowels\n   let vowels = ['a', 'e', 'i', 'o', 'u']\n\n   // Initialize a counter for the number of vowels & consonants\n   let numberOfVowels = 0\n   let numberOfConsonants = 0\n\n   // Iterate through each character in the string\n   for (let char of str.toLowerCase()){\n\n       if (vowels.includes(char)) {\n           numberOfVowels++\n       } else {\n           numberOfConsonants++\n       }\n   }\n\n   // Return the total count\n   return (`\n       Number of Vowels : ${numberOfVowels}\n       Number of Consonants : ${numberOfConsonants}\n   `)\n}\n\nconst myString = \"Omkesh Ramesh Jadhav\"\n\nconsole.log(countVowels(myString));  // 6 & 14",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "frequency-of-a-character-write-a-function-to-count-the-numbe",
+              "title": "Frequency of a character : Write a function to count the number of occurrences of a specific character in a string.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function countOccurrences(str, char) {\n   // Initialize a counter for the occurrences\n   let count = 0;\n\n   // Iterate through each character in the string\n   for(let alphabet of str.toLowerCase()){\n     // Check if the current character matches the specific character\n       if (alphabet === char) {\n           count++\n       }\n   }\n   // Return the total count of occurrences\n   return count;\n}\n\nconsole.log(countOccurrences(\"hello world\", \"o\"));     // 2\nconsole.log(countOccurrences(\"javascriptaaaa\", \"a\"));  // 6",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "capitalize-the-first-letter-of-each-word-write-a-function-to",
+              "title": "Capitalize the first letter of each word : Write a function to capitalize the first letter of each word of a string.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function cpaitalizeEachWord(str){\n   // Step 1: Split the string into an array of words\n   str = str.split(\" \")\n   let capitalizedArray = []\n\n   // Step 2: Iterate over each word and capitalize the first letter\n   str.map((word) => {\n       const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1)\n       capitalizedArray.push(capitalizedWord)\n   })\n\n   // Step 3: Join the array of words back into a single string\n   return capitalizedArray.join(\" \")\n}\n\nconsole.log(cpaitalizeEachWord(\"hello javascript\"));  // \"Hello Javascript\"",
+                  "lang": "javascript"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "word.charAt(0).toUpperCase() gives the first letter of the word, capitalized."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "word.slice(1) gives the rest of the word."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "+ operator concatenates the both"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "longest-word-write-a-function-that-returns-the-longest-word",
+              "title": "Longest word : Write a function that returns the longest word in a String.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function findLongestWord(sentence) {\n   // Step 1: Split the string into words\n   let arrOfWords = sentence.split(\" \")\n\n   // Step 2: Initialize variables to keep track of the longest word\n   let longestWord = \"\";\n   let maxLength = 0;\n\n   // Step 3: Iterate through each word\n   for (let word of arrOfWords) {\n       // Check if the current word is longer than the longest found so far\n       if (word.length > longestWord.length) {\n           longestWord = word  // Update the longest word\n           maxLength = word.length; // Update the maximum length\n       }\n   }\n   return `Longest word is \"${longestWord}\" of length ${maxLength}`\n}\n\n\nlet sentence = \"I Love Coding In JavaScript\"\n\n\nconsole.log(findLongestWord(sentence));  // JavaScript & 10",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "2nd-longest-word-write-a-function-to-find-the-longest-and-se",
+              "title": "2nd longest Word : Write a function to find the longest and Second Longest Word in a string.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function longestWords(sentence){\n   let words = sentence.split(\" \")\n   let longestWord = \"\"\n   let secondLongestWord = \"\"\n\n   for(let word of words){\n       if (word.length > longestWord.length) {\n           secondLongestWord = longestWord\n           longestWord = word\n       } else if (word.length > secondLongestWord.length && word < longestWord) {\n           secondLongestWord = word;\n       }\n   }\n\n   return `Longest : ${longestWord}, second longest : ${secondLongestWord}`\n}\n\nlet sentence = \"I enjoy javascript from the bottom of my heart\"\n\nconsole.log(longestWords(sentence));",
+                  "lang": "javascript"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "else if condition is added to check if the current word is longer than the secondLongestWord but shorter than the longestWord"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "remove-duplicate-characters-write-a-function-to-remove-dupli",
+              "title": "Remove Duplicate Characters : Write a function to remove duplicate characters from a String.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Way 1"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function removeDuplicates(str) {\n   str = str.toLowerCase();\n   let charObj = {};\n   let uniqueChar = '';\n\n   for (let char of str) {\n       charObj[char] = (charObj[char] || 0) + 1;\n   }\n\n   for (let char of str) {\n       if (charObj[char] === 1) {\n           uniqueChar += char;\n       } else {\n       }\n   }\n\n   if (uniqueChar == '') {\n       return 'No unique character found';\n   } else {\n       return uniqueChar;\n   }\n}\n\n // Example usage:\nconsole.log(removeDuplicates(\"hello world\")); // Output: \"helo wrd\"\nconsole.log(removeDuplicates(\"javascript\"));  // Output: \"javascript\"",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Way 2"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function removeDuplicates(str) {\n   str = str.toLowerCase();\n   let uniqueCharStr = '';\n   let duplicateCharStr = '';\n\n   for (let char of str) {\n       if (uniqueCharStr.includes(char)) {\n           duplicateCharStr += char;\n       } else {\n           uniqueCharStr += char;\n       }\n   }\n   return uniqueCharStr;\n}\n\n // Example usage:\nconsole.log(removeDuplicates(\"hello world\")); // Output: \"helo wrd\"\nconsole.log(removeDuplicates(\"javascript\"));  // Output: \"javascript\"",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "first-non-repeating-character-write-a-function-to-find-the-f",
+              "title": "First Non-Repeating Character : Write a function to find the first Non-Repeating Character in a String.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function firstNonRepeatingChar(str) {\n   // Create a frequency map for characters\n   const charFrequency = {};\n\n   // Loop through the string to count each character's frequency\n   for (const char of str) {\n       charFrequency[char] = (charFrequency[char] || 0) + 1;\n   }\n\n   console.log(charFrequency);\n\n\n   // Loop through the string again to find the first non-repeating character\n   for (const char of str) {\n       if (charFrequency[char] === 1) {\n           return char; // Return the first character with frequency 1\n       }\n   }\n\n   return `No non-repeating character found - All characters are repeating`;\n}\n\nconst inputString = \"swiss\";\nconsole.log(firstNonRepeatingChar(inputString)); // Output: \"w\"",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "trim-extra-spaces-from-a-string-write-a-function-to-remove-a",
+              "title": "Trim Extra Spaces from a string : Write a function to remove all whitespaces (extra spaces) from a string leaving only single spaces between words and no leading or trailing spaces.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Using regex",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function trimExtraSpaces(str){\n   // Trim leading and trailing spaces\n   let trimmed = str.trim()\n\n   // Replace multiple spaces with single space using regex\n   let singleSpaced = trimmed.replace(/\\s+/g, \" \")\n   return singleSpaced\n}\n\nlet messyString = \"   This   is    a     messy   sentence   \"\nconsole.log(trimExtraSpaces(messyString));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using loop",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function trimExtraSpaces(str) {\n   let trimmed = str.trim()\n\n   let result = '';\n   let isSpace = false;\n\n   for (const char of trimmed) {\n       if (char === ' ') {\n           // If we encounter a space and the previous character was not a space, add one space\n           if (!isSpace) {\n               result += ' ';\n               isSpace = true;\n           }\n       } else {\n           // For non-space characters, append to the result and reset the space flag\n           result += char;\n           isSpace = false;\n       }\n   }\n\n   return result;\n}\n\nlet messyString = \"   This   is    a     messy   sentence   \"\ntrimExtraSpaces(messyString)",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arrays",
+      "title": "Arrays",
+      "subsections": [
+        {
+          "id": "arrays-intro",
+          "title": null,
+          "questions": [
+            {
+              "id": "remove-find-duplicates-write-a-function-to-remove-find-dupli",
+              "title": "Remove / find duplicates : Write a function to remove / find duplicate elements in an array.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Using filter",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const arr = [1, 2, 3, 4, 2, 5, 1, 6, 9, 11, 3, 3, 3];\n\nlet uniqueValuesFilter = []\nlet duplicateValuesFilter = []\n\nfunction filterDuplicateValues(){\n   arr.filter((item, index) => {\n       if (arr.indexOf(item) == index) {\n           uniqueValuesFilter.push(item)\n       } else {\n           duplicateValuesFilter.push(item)\n       }\n   })\n}\n\nfilterDuplicateValues(arr)\n\nconsole.log(uniqueValuesFilter);      // [ 1, 2, 3, 4, 5, 6, 9, 11]\nconsole.log(duplicateValuesFilter);   // [ 2, 1, 3, 3, 3 ]",
+                          "lang": "javascript"
+                        },
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "indexOf() method finds the first occurrence of the item."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "If the index of the current element matches the first occurrence then push it to the uniqueValuesFilter array."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "But if the index of the current element does not match with the first occurrence then the current element is a duplicate. So, push it to the duplicateValuesFilter array."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using Set",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const arr = [1, 2, 3, 4, 2, 5, 1, 6, 9, 11, 3, 3, 3];\n\nlet uniqueValues = new Set()\nlet duplicateValues = new Set()\n\nfunction removeDuplicateValues() {\n   for (let item of arr) {\n       if (uniqueValues.has(item)) {\n           duplicateValues.add(item)\n       } else {\n           uniqueValues.add(item)\n       }\n   }\n}\n\nremoveDuplicateValues(arr)\nconsole.log(Array.from(uniqueValues));      // [1 2 3 4 5 6 9 11]\nconsole.log(Array.from(duplicateValues));   // [2, 1, 3]",
+                          "lang": "javascript"
+                        },
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Set will return values only once i.e. it will not return the same value again."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "even-odd-numbers-write-a-function-to-find-even-or-odd-number",
+              "title": "Even-odd numbers : Write a function to find even or odd numbers in an array.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function oddOrEven(arr){\n\n   let odd = []\n   let even = []\n\n   for(let num of arr){\n       if (num % 2 === 0) {\n           even.push(num)\n       } else {\n           odd.push(num)\n       }\n   }\n\n   return (`odd : ${odd} and even : ${even}`)\n}\n\nconst arr = [1, 2, 4, 5, 7, 9, 10]\n\nconsole.log(oddOrEven(arr));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "sum-of-all-elements-write-a-function-to-find-the-sum-of-all",
+              "title": "Sum of all elements : Write a function to find the sum of all elements in an array.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Using reduce",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function sumOfArray(arr){\n   const sum = arr.reduce((acc, curr) => {\n       return acc + curr\n   })\n\n   return sum\n}\n\nconst arr = [1, 2, 4, 5, 7, 9, 10]\n\nconsole.log(sumOfArray(arr));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using loop",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function sumOfArray(arr){\n   let sum = 0\n\n   for(let num of arr){\n       sum += num\n   }\n\n   return sum\n}\n\nconst arr = [1, 2, 4, 5, 7, 9, 10]\n\nconsole.log(sumOfArray(arr));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "sort-array-write-a-function-to-sort-an-array-of-numbers-in-a",
+              "title": "Sort Array : Write a function to sort an array of numbers in ascending order.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function sortArray(arr) {\n   return arr.sort((a,b) => a-b)\n}\n\nconst arr = [1, 20, 4, 5, 7, 9, 10]\nconsole.log(sortArray(arr));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "merge-unsorted-arrays-into-a-single-sorted-array-write-a-fun",
+              "title": "Merge unsorted arrays into a single sorted array : Write a function to merge two arrays into a single sorted array.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function mergedSort(arr1, arr2){\n   let mergedArr = [...arr1, ...arr2]\n\n   let sortedMergedArr = mergedArr.sort((a,b) => a-b)\n\n   return sortedMergedArr\n}\n\nconst arr1 = [10, 3, 52, 7, 13]\nconst arr2 = [8, 20, 6, 5]\n\nconsole.log(mergedSort(arr1, arr2));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "merge-sorted-arrays-into-a-single-sorted-array-write-a-funct",
+              "title": "Merge sorted arrays into a single sorted array : Write a function to merge two sorted arrays into a sorted array.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Efficient way",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function mergeAndSort(arr1, arr2) {\n   let i = 0; // Pointer for arr1\n   let j = 0; // Pointer for arr2\n   let mergedArr = [];\n\n   // Traverse both arrays and merge them in sorted order\n   while (i < arr1.length && j < arr2.length) {\n       if (arr1[i] < arr2[j]) {\n           mergedArr.push(arr1[i]);\n           i++;\n       } else {\n           mergedArr.push(arr2[j]);\n           j++;\n       }\n   }\n\n   // Add any remaining elements from arr1\n   while (i < arr1.length) {\n       mergedArr.push(arr1[i]);\n       i++;\n   }\n\n   // Add any remaining elements from arr2\n   while (j < arr2.length) {\n       mergedArr.push(arr2[j]);\n       j++;\n   }\n\n   return mergedArr;\n}\n\nlet arr1 = [1, 3, 5];\nlet arr2 = [2, 4, 6];\nconsole.log(mergeAndSort(arr1, arr2));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Inefficient way",
+                          "bold": true
+                        },
+                        {
+                          "text": " - Using sort doesn’t take advantage of already sorted arrays"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "let arr1 = [1, 3, 5]\nlet arr2 = [2, 4, 6]\n\nfunction mergeAndSort(arr1, arr2){\n   let mergedArr = [...arr1, ...arr2]\n   let mergedSortArr = mergedArr.sort((a, b) => a - b)\n   return mergedSortArr\n}\n\nconsole.log(mergeAndSort(arr1, arr2));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "check-sorted-in-ascending-order-write-a-function-to-check-if",
+              "title": "Check sorted in ascending order : Write a function to check if a given array is sorted in ascending order or not.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "const arr = [1, 2, 4, 5, 7, 9, 10]\n\nfunction isSorted(arr){\n   for (let i = 1; i < arr.length; i++) {\n       if (arr[i-1] > arr[i]) {\n           return false\n       }\n   }\n   return true\n}\n\nconsole.log(isSorted(arr));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "sorting-object-arrays",
+              "title": "Sorting Object Arrays",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "const cars = [\n   { type: \"Volvo\", year: 2016 },\n   { type: \"Saab\", year: 2001 },\n   { type: \"BMW\", year: 2010 }\n];\n\n// Make a copy of the array before sorting to avoid modifying the original\nconst carsSorted = [...cars].sort(function (a, b) {\n   return b.year - a.year;  // Sort in descending order by year\n});\n\n// Print the sorted array\nfor (let car of carsSorted) {\n   console.log(car);\n}",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "largest-and-smallest-number-write-a-function-to-find-largest",
+              "title": "Largest and smallest number : Write a function to find largest and smallest number in a given array",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Using loop",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function extremeNumbers(){\n   let largestNum = arr[0]\n   let smallestNum = arr[0]\n\n   for( let num of arr){\n       if (num > largestNum) {\n           largestNum = num\n       }\n\n       if (num < smallestNum) {\n           smallestNum = num\n       }\n   }\n\n   return `Largest : ${largestNum}, Smallest : ${smallestNum}`\n}\n\nlet arr = [1, 2, 10, 15, 5, -6, 33, 43, 6, 19]\nconsole.log(extremeNumbers(arr));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using Math object",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const arr = [3, 5, 7, 2, 8];\n\nconst max = Math.max(...arr)\nconst min = Math.min(...arr)\nconsole.log(max);\nconsole.log(min);",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using apply method",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const arr = [3, 5, 7, 2, 8];\nconst maxNum = Math.max.apply(null, arr)\nconst minNum = Math.min.apply(null, arr)\nconsole.log(maxNum);\nconsole.log(minNum);",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using reduce method",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const array = [5, 1, 33, 2, 6];\n\nlet maxVal = array.reduce((acc, curr) => {\n   if(curr > acc) acc = curr\n   return acc\n}, 0)\n\n\nlet minVal = array.reduce((acc, curr) => {\n   if(curr < acc) acc = curr\n   return acc\n}, array[0])\n\nconsole.log(maxVal);  // 33\nconsole.log(minVal);  // 1",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using sort()",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const points = [40, 100, 1, 5, 25, 10];\npoints.sort(function(a, b){return a - b});\nconsole.log(`Lowest value in the array is ${points[0]}`);\nconsole.log(`Highest value in the array is ${points[points.length-1]}`);",
+                          "lang": "javascript"
+                        },
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Sorting a whole array is a very inefficient method if you only want to find the highest (or lowest) value."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "second-largest-number-write-a-function-to-find-the-second-la",
+              "title": "Second largest number : Write a function to find the second largest number in the array.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Using a Single Pass (Efficient)"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "const arr = [10, 20, 5, 25, 20, 5];\n\nlet largest = -Infinity;\nlet secondLargest = -Infinity\narr.map((num)=>{\n   if(num > largest) {\n       largest = num;\n       secondLargest = largest;\n   } else if(largest > num && num > secondLargest){\n       secondLargest = num\n   }\n})\nconsole.log(largest);\nconsole.log(secondLargest);",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using set and sort()"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function secondLargestNumber(arr){\n   let sortedArr = arr.sort((a,b)=> b - a)\n   let secondLargest = sortedArr[1]\n   return secondLargest\n}\n\nconst arr = [10, 20, 5, 25, 20, 5];\nconsole.log(secondLargestNumber(arr));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "kth-largest-number-write-a-function-to-find-the-kth-largest",
+              "title": "kth largest number : Write a function to find the kth largest element in an unsorted array.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function kthLargest(arr, k){\n   let sortedArr = arr.sort((a, b) => a - b)\n   console.log(sortedArr);\n\n   return sortedArr[k-1]\n}\n\nconst arr = [10, 3, 52, 7, 13, 8, 20, 6, 5]\nlet k = 5\nconsole.log(kthLargest(arr, k));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "remove-element-write-a-function-to-remove-specific-element-f",
+              "title": "Remove element : Write a function to remove specific element from an array.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function removeElement(arr, targetElement){\n   let filteredArr = arr.filter((element) => {\n       return element !== targetElement\n   })\n\n   return filteredArr\n}\n\nlet arr = [1, 3, 5, 7, 8, 9, 11, 13]\nconsole.log(removeElement(arr, 8));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "compare-arrays-how-to-compare-two-arrays-are-equal-or-not",
+              "title": "Compare arrays : How to compare two Arrays are Equal or Not",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function areArraysEqual(arr1, arr2) {\n   // Check if both arrays have the same length\n   if (arr1.length !== arr2.length) {\n       return false;\n   }\n\n   // Compare each element of the arrays\n   for (let i = 0; i < arr1.length; i++) {\n       if (arr1[i] !== arr2[i]) {\n           return false;\n       }\n   }\n\n   return true;\n}\n\nconsole.log(areArraysEqual([1, 2, 3], [1, 2, 3])); // true\nconsole.log(areArraysEqual([1, 2, 3], [1, 2, 4])); // false\nconsole.log(areArraysEqual([1, 2, 3], [1, 2])); // false\nconsole.log(areArraysEqual([1, 2, 3], [1, 2, 3, 4])); // false",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "intersection-write-a-function-to-find-intersection-of-two-ar",
+              "title": "Intersection : Write a function to find intersection of two arrays / sets",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Intersection = Common elements"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using filter method"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function interSection(arr1, arr2){\n   let intersection = arr1.filter((num) => arr2.includes(num))\n   return intersection\n}\n\nlet arr1 = [1, 2, 3, 4, 6]\nlet arr2 = [2, 3, 5, 6]\n\nconsole.log(interSection(arr1, arr2));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Using Set"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function interSection(arr1, arr2){\n   let intersection = []\n\n   let set = new Set(arr2)\n\n   arr1.filter((num) => {\n       if (set.has(num)) {\n           intersection.push(num)\n       }\n   })\n\n   return insectionArr\n}\n\nlet arr1 = [1, 2, 3, 4, 6]\nlet arr2 = [2, 3, 5, 6]\n\nconsole.log(interSection(arr1, arr2));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "union-write-a-function-to-find-the-union-of-two-arrays",
+              "title": "Union : Write a function to find the union of two arrays.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Union = Combine both the arrays but should not contain duplicates"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function union(arr1, arr2) {\n   // Combine both arrays into a single array\n   const combinedArray = [...arr1, ...arr2];\n\n   // Create a Set to store unique elements\n   const uniqueSet = new Set(combinedArray);\n\n   // Convert the Set back to an array\n   return [...uniqueSet];\n}\n\n\nconst array1 = [1, 2, 3, 4];\nconst array2 = [3, 4, 5, 6];\n\nconst unionArray = union(array1, array2);\nconsole.log(unionArray); // Output: [1, 2, 3, 4, 5, 6]",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "missing-number-for-an-array-containing-numbers-from-0-to-n-w",
+              "title": "Missing number : For an array containing numbers from 0 to n, write a function to find the missing number / numbers in that Array.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "For multiple missing numbers",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Using Set - Efficient",
+                                  "bold": true
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "function findMultipleMissingNumbers(arr, lastIndex) {\n\n   let set = new Set(arr)\n   let missingNumbers = []\n\n   for (let i = 0; i < lastIndex; i++) {\n       if (!set.has(i)) {\n           missingNumbers.push(i)  // If a number from 0 to n is not in the set, it's missing\n       }\n   }\n   return missingNumbers.join(' ');\n}\n\nconst arr = [0, 2, 3, 6]\nconsole.log(findMultipleMissingNumbers(arr, 6));",
+                                  "lang": "javascript"
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Using Array - Inefficient",
+                                  "bold": true
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "function findMissingNum(arr, lastIndex) {\n   let missingNumbers = [];\n\n   for (let i = 0; i < lastIndex; i++) {\n       if (!arr.includes(i)) {\n           missingNumbers.push(i);\n       }\n   }\n   return missingNumbers.join(' ');\n}\n\n\nconst arr = [0, 2, 3, 6]\nconsole.log(findMultipleMissingNumbers(arr, 6));",
+                                  "lang": "javascript"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "For one missing number",
+                          "bold": true
+                        },
+                        {
+                          "text": " - Using Summation Formula"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function findMissingNumber(arr){\n   let n = arr.length\n   let expectedSum = (n*(n+1))/2\n   let actualSum = arr.reduce((sum, num) => sum+num, 0)\n   let missingNumber = expectedSum - actualSum\n\n   return missingNumber\n}\n\nconst arr = [0, 1, 2, 3, 4, 6];\nconsole.log(findMissingNumber(arr)); // Output: 5",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "title": "Other",
+      "subsections": [
+        {
+          "id": "other-intro",
+          "title": null,
+          "questions": [
+            {
+              "id": "fibonacci-sequence-write-a-function-to-calculate-the-fibonac",
+              "title": "Fibonacci sequence : Write a function to calculate the Fibonacci sequence up to a given number.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Fibonacci series starts with 0 and 1. Each subsequent number is the sum of the two preceding numbers."
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "function fibonacciSeries(n){\n\n   // Initialze fibonacci with first two numbers\n   let fibonacci = [0, 1]\n\n   // Start from index 2 as first two numbers are already declared\n   for (let i = 2; i < n; i++) {\n       // Calculate value of current number as sum of two preceding numbers\n       fibonacci[i] = fibonacci[i-1] + fibonacci[i-2]\n   }\n   return fibonacci\n}\n\nlet n = 20\nconsole.log(fibonacciSeries(n));",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "factorial-write-a-function-to-find-the-factorial-of-a-given",
+              "title": "Factorial : Write a function to find the factorial of a given number.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function findFactorial(num){\n   // Handle edge case for 0\n   if(num === 0){\n       return 1\n   }\n\n   // Initialize the factorial value\n   let factorialValue = 1;\n\n   // Multiple the numbers from 1 to num to calculate factorial\n   for (let i = 1; i <= num; i++) {\n       factorialValue *= i\n   }\n\n   return factorialValue\n}\n\nconsole.log(findFactorial(5));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "factors-write-a-function-to-find-factors-of-a-given-integer",
+              "title": "Factors : Write a function to find factors of a given integer.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function findFactors(num) {\n   let factors = new Set();\n\n   for (let i = 1; i <= Math.sqrt(num); i++) {\n       if (num % i === 0) {\n           factors.add(i);\n           factors.add(num / i);\n       }\n   }\n\n   let SortedFactorialArr = [...factors].sort((a, b) => a - b).join(' ');\n   return SortedFactorialArr;\n}\n\nlet num = 100\nconsole.log(findFactors(num));",
+                  "lang": "javascript"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Math.sqrt(num) is written to decrease the number of iterations. You can also do num/2 but it will increase the number of iterations."
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "In this case, Math.sqrt(num) will restrict the iterations till 6 but if you do num/2 it will do iterations till 18."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "prime-number-write-a-function-to-check-if-a-given-number-is",
+              "title": "Prime number : Write a function to check if a given number is a prime number or not.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function isPrime(num) {\n   // Numbers less than 2 are not prime\n   if (num < 2) return false;\n\n   // Check divisors from 2 up to the half of the number\n   for (let i = 2; i <= Math.sqrt(num); i++) {\n       if (num % i === 0) {\n           return false; // Found a divisor, so it's not prime\n       }\n   }\n\n   return true; // No divisors found, so it's prime\n}\n\nconsole.log(isPrime(7));  // true\nconsole.log(isPrime(10)); // false\nconsole.log(isPrime(1));  // false\nconsole.log(isPrime(-13));  // false",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "print-table-write-a-function-to-print-the-table-of-any-user",
+              "title": "Print table : Write a function to print the table of any user defined number.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function printTable(num){\n   let table = []\n   for (let i = 1; i < 10; i++) {\n       table.push(num * i)\n   }\n\n   return table\n}\n\nlet number = 5\nconsole.log(printTable(number));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "time-taken-for-an-operation-write-a-function-that-calculates",
+              "title": "Time taken for an operation : Write a function that calculates the time (in seconds) it takes for the JS code to calculate sum from 1 to n, given n as the input.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Try running it for",
+                          "bold": true
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Sum from 1-100",
+                          "bold": true
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Sum from 1-100000",
+                          "bold": true
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Sum from 1-1000000000",
+                          "bold": true
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "** Hint - use Date class exposed in JS",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "code",
+                  "code": "function calculateTime(n) {\n   const startTime = new Date().getTime()\n\n   let sum = 0;\n   for(let i=1; i<=n; i++){\n       sum = sum+i\n   }\n\n   const endTime = new Date().getTime()\n\n   const timeTaken = endTime - startTime\n\n   console.log(timeTaken);\n}\n\ncalculateTime(1000000000)",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "kilometers-miles-conversion-write-a-function-to-convert-kilo",
+              "title": "kilometers-miles conversion : Write a function to convert kilometers into miles or vice versa.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function distanceConversion(dist, unit){\n\n   if(typeof dist !== \"number\" || dist < 0){\n       return `Enter valid non-negative distance`\n   }\n\n   if(unit == \"km\"){\n       let distInMiles = dist * 0.621371\n       return `${dist} kilometers is ${distInMiles.toFixed(2)} miles.`;\n   }else if(unit == \"mi\"){\n       let distInKm = dist/0.621371\n       return `${dist} miles is ${distInKm.toFixed(2)} kilometers.`;\n   } else {\n       return \"Please specify a valid unit: 'km' for kilometers or 'mi' for miles.\";\n   }\n}\n\nconsole.log(distanceConversion(10, \"km\"));\nconsole.log(distanceConversion(20, \"mi\"));\nconsole.log(distanceConversion(20, \"x\"));",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "celsius-fahrenheit-conversion-write-a-function-to-convert-ce",
+              "title": "Celsius-fahrenheit conversion : Write a function to convert celsius to fahrenheit or vice versa.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function convertTemperature(value, unit) {\n   if (typeof value !== \"number\") {\n       return \"Please enter a valid numeric temperature.\";\n   }\n\n   if (unit === \"C\") {\n       // Celsius to Fahrenheit\n       const fahrenheit = (value * 9/5) + 32;\n       return `${value}°C is ${fahrenheit.toFixed(2)}°F`;\n   } else if (unit === \"F\") {\n       // Fahrenheit to Celsius\n       const celsius = (value - 32) * 5/9;\n       return `${value}°F is ${celsius.toFixed(2)}°C`;\n   } else {\n       return \"Please specify a valid unit: 'C' for Celsius or 'F' for Fahrenheit.\";\n   }\n}\n\nconsole.log(convertTemperature(25, \"C\")); // \"25°C is 77.00°F\"\nconsole.log(convertTemperature(77, \"F\")); // \"77°F is 25.00°C\"\nconsole.log(convertTemperature(30, \"X\")); // \"Please specify a valid unit: 'C' for Celsius or 'F' for Fahrenheit.\"\nconsole.log(convertTemperature(\"abc\", \"C\")); // \"Please enter a valid numeric temperature.\"",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "swap-two-variables-how-to-swap-two-variables-without-using-t",
+              "title": "Swap two variables : how to swap two variables without using the third.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function swapUsingArithmetic(a, b) {\n   console.log(\"Before Swap: a =\", a, \", b =\", b);\n\n   // Swap values\n   a = a + b;  // a now becomes the sum of a and b\n   b = a - b;  // b becomes the original value of a\n   a = a - b;  // a becomes the original value of b\n\n   console.log(\"After Swap: a =\", a, \", b =\", b);\n}\n\nswapUsingArithmetic(5, 10);",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "star-pattern-how-to-print-a-star-pattern-in-diamond-shape-in",
+              "title": "Star pattern : How to print a star pattern in diamond shape in JavaScript.",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function printDiamond(n) {\n   // Print upper part of the diamond (including the middle row)\n   for (let i = 1; i <= n; i++) {\n       let row = \"\";\n\n       // Print leading spaces\n       for (let j = 1; j <= n - i; j++) {\n           row += \" \";\n       }\n\n       // Print stars\n       for (let k = 1; k <= (2 * i - 1); k++) {\n           row += \"*\";\n       }\n\n       console.log(row);\n   }\n\n   // Print lower part of the diamond\n   for (let i = n - 1; i >= 1; i--) {\n       let row = \"\";\n\n       // Print leading spaces\n       for (let j = 1; j <= n - i; j++) {\n           row += \" \";\n       }\n\n       // Print stars\n       for (let k = 1; k <= (2 * i - 1); k++) {\n           row += \"*\";\n       }\n\n       console.log(row);\n   }\n}\n\n// Print diamond pattern with 5 rows in the upper half\nprintDiamond(5);",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "fizzbuzz-print-numbers-from-1-to-n-for-multiples-of-three-pr",
+              "title": "FizzBuzz : Print numbers from 1 to n. For multiples of three, print \"Fizz\" instead of the number. For multiples of five, print \"Buzz\". For numbers which are multiples of both three and five, print \"FizzBuzz\".",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "function fizzBuzz(n) {\n   for (let i = 1; i <= n; i++) {\n\n       // Check divisibility by both 3 & 5\n       if (i % 3 === 0 && i % 5 === 0) {\n           console.log(\"FizzBuzz\");\n       }\n       // check divisibility by 3\n       else if (i % 3 === 0) {\n           console.log(\"Fizz\");\n       }\n       // check divisibility by 5\n       else if (i % 5 === 0) {\n           console.log(\"Buzz\");\n       }\n       // If not divisible by 3 or 5, print number\n       else {\n           console.log(i);\n       }\n   }\n}\n\nfizzBuzz(15);",
+                  "lang": "javascript"
+                }
+              ]
+            },
+            {
+              "id": "armstrong-number-program-to-check-armstrong-number-in-javasc",
+              "title": "Armstrong Number : Program to Check Armstrong Number in JavaScript.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "An Armstrong number (also known as a narcissistic number) is a number that is equal to the sum of its own digits, each raised to the power of the number of digits. For example:"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "For a 3-digit number, if the sum of the cubes of the digits equals the number itself, it's an Armstrong number."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example:",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "For the number 153:"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "13+53+33=1531^3 + 5^3 + 3^3 = 15313+53+33=153"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "So, 153 is an Armstrong number."
+                    }
+                  ]
+                },
+                {
+                  "type": "code",
+                  "code": "function isArmstrongNumber(num) {\n   let number = num;\n   let sum = 0;\n   let numOfDigits = num.toString().length;\n\n   // Loop through each digit of the number\n   while (num > 0) {\n       let digit = num % 10;  // Get the last digit\n       sum += Math.pow(digit, numOfDigits);  // Add the digit raised to the power of numOfDigits\n       num = Math.floor(num / 10);  // Remove the last digit\n   }\n\n   // Check if the sum is equal to the original number\n   return sum === number;\n}\n\n// Example usage:\nconsole.log(isArmstrongNumber(153));  // Output: true\nconsole.log(isArmstrongNumber(9474)); // Output: true\nconsole.log(isArmstrongNumber(123));  // Output: false",
+                  "lang": "javascript"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Find the max count of consecutive 1’s in an array ?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Create a function which will accepts two arrays arr1 and arr2. The function should return true if every value in arr1 has its corresponding value squared in array2. The frequency of values must be same."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Write logic to get unique objects from below array ?"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "I/P: [{name: \"sai\"},{name:\"Nang\"},{name: \"sai\"},{name:\"Nang\"},{name: \"111111\"}];"
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "O/P: [{name: \"sai\"},{name:\"Nang\"}{name: \"111111\"}"
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Write a JavaScript program to find the largest element in a nested array."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "[[3, 4, 58], [709, 8, 9, [10, 11]], [111, 2]]"
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Write a javascript function that reverses the order of words in a sentence without using the built-in reverse() method."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

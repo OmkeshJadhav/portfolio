@@ -51,14 +51,14 @@ export function Hero() {
     <section
       id="home"
       ref={rootRef}
-      className="relative flex min-h-[100svh] items-center overflow-hidden px-6 pt-28 md:px-12 lg:px-20"
+      className="relative flex min-h-svh items-center overflow-hidden px-6 pt-28 md:px-12 lg:px-20"
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Left: copy */}
         <div>
           <div
             data-hero-eyebrow
-            className="mb-6 inline-flex items-center gap-2 text-sm font-medium"
+            className="mb-6 inline-flex items-center gap-2 text-sm font-bold"
           >
             <span
               className="h-2 w-2 rounded-full"
@@ -70,12 +70,12 @@ export function Hero() {
           <h1 className="font-display leading-[0.95] tracking-tight">
             <span
               data-hero-line
-              className="block text-[clamp(1.5rem,4vw,2.5rem)] font-normal"
-              style={{ color: "var(--color-ink-soft)" }}
+              className="block text-[clamp(1.5rem,4vw,2.5rem)] font-extrabold"
+              // style={{ color: "var(--color-ink-soft)" }}
             >
               {HERO_COPY.greeting}
             </span>
-            <span data-hero-line className="block text-[clamp(2.75rem,10vw,5.5rem)]">
+            <span data-hero-line className="block text-[clamp(2.75rem,10vw,5rem)] font-bold">
               <span style={{ color: "var(--color-accent)" }}>Omkesh</span>{" "}
               <span style={{ color: "var(--color-ink)" }}>Jadhav</span>
             </span>

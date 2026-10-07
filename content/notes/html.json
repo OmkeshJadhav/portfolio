@@ -1,0 +1,4775 @@
+{
+  "slug": "html",
+  "title": "HTML",
+  "order": 1,
+  "source": "1. HTML Interview Q & A.docx",
+  "questionCount": 50,
+  "sections": [
+    {
+      "id": "notes",
+      "title": null,
+      "subsections": [
+        {
+          "id": "notes-intro",
+          "title": null,
+          "questions": [
+            {
+              "id": "what-is-html-explain-the-difference-between-html-and-html5-w",
+              "title": "What is HTML? Explain the difference between HTML and HTML5? What are the advantages of HTML5?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "HTML = Hyper Text Markup Language is the "
+                        },
+                        {
+                          "text": "standard markup",
+                          "bold": true
+                        },
+                        {
+                          "text": " "
+                        },
+                        {
+                          "text": "language",
+                          "bold": true
+                        },
+                        {
+                          "text": " used to create web pages."
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Hypertext defines the link between the web pages"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "Hyper - Anchor <a> tag"
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "Text - Text content"
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Markup Language - Language that defines the structure of a document using elements like headings, paragraphs, links, lists etc."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "What is the difference between HTML and HTML5 / Advantages of HTML5?",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "HTML5",
+                                "bold": true
+                              }
+                            ],
+                            [
+                              {
+                                "text": "HTML",
+                                "bold": true
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "HTML5 is the latest version of HTML"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "HTML is the older version of HTML"
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "The doctype declaration is quite simple and easy."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "The doctype declaration is too long and complicated."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "Allows JavaScript to run in the background. This is possible due to the JS Web worker API in HTML5."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Does not allow JavaScript to run in the browser."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "New elements for web structure like <nav>, <header>, <footer>, <article>, <section> etc."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Elements like nav and header were not present."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "HTML5 introduced forms with input “type” attribute"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "“Type” attribute was not available"
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "HTML5 supports <audio> and <video> tags."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "It didn’t support audio and video without the use of Flash player support."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "HTML5 language is more mobile-friendly."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Older versions of HTML are less mobile-friendly."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "It uses SQL databases and application cache to store offline data."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "It uses cookies to store temporary data."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "It allows drag-and-drop effects."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "It does not allow drag-and-drop effects."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "Attributes of the charset, async, and ping are a part of HTML 5."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Attributes like charset, async, and ping are absent in HTML."
+                                }
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-difference-between-html-and-xhtml",
+              "title": "What is the difference between HTML and XHTML?",
+              "blocks": [
+                {
+                  "type": "table",
+                  "header": [
+                    [
+                      {
+                        "text": "HTML",
+                        "bold": true
+                      }
+                    ],
+                    [
+                      {
+                        "text": "XHTML",
+                        "bold": true
+                      }
+                    ]
+                  ],
+                  "rows": [
+                    [
+                      [],
+                      [
+                        {
+                          "text": "XHTML (eXtensible HTML) is a markup language that follows the rules of XML to define the structure of a web page."
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "Doctype is not necessary to write at the top."
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Doctype is very necessary to write at the top of the file."
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "HTML has lenient syntax - Closing tag is not mandatory for some elements."
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "<img src=”img.jpg” alt=”image”>"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "XHTML follows stricter syntax rules. - All tags must be properly nested and closed."
+                        },
+                        {
+                          "text": "\n"
+                        },
+                        {
+                          "text": "<img src=”img.jpg” alt=”image”/>"
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "All tags and attributes are not necessarily to be in lower or upper case. - HTML is not case-sensitive"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Every tag and attribute should be in lower case. - XHTML is case-sensitive"
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "HTML is widely supported by all browsers and web platforms"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "XHTML has limited support by browsers."
+                        }
+                      ]
+                    ]
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "Other various markup languages : MathML, XML, SGML"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "mention-some-html5-tags",
+              "title": "Mention some HTML5 tags.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Structural and semantic tags",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "<header>"
+                              }
+                            ],
+                            [
+                              {
+                                "text": "Represents the introductory content or a group of navigational links."
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "<footer>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents the footer content of a section or page."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<article>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents self-contained, reusable content like a blog post."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<section>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents a thematic grouping of content, usually with a heading."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<aside>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents content related to the main content, like a sidebar."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<nav>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents a navigation menu for links."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<main>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents the primary content of the document."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<figure>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents self-contained content, often used with <figcaption>"
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<figcaption>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Provides a caption or description for the <figure> content."
+                                }
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Multimedia Tags",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "<audio>"
+                              }
+                            ],
+                            [
+                              {
+                                "text": "Embeds audio content with controls."
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "<video>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Embeds video content with controls."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<source>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Specifies multiple media resources for <audio> or <video>."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<track>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Provides captions or subtitles for media elements."
+                                }
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Graphics and Interactive Tags",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "<svg>"
+                              }
+                            ],
+                            [
+                              {
+                                "text": "Embeds Scalable Vector Graphics (SVG) for vector-based images."
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "<dialog>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents a dialog box or popup."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<progress>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents the progress of a task."
+                                }
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Form-Related Tags and Properties",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "<datalist>"
+                              }
+                            ],
+                            [
+                              {
+                                "text": "Provides a list of predefined options for <input>"
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "<output>"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Represents the result of a calculation or user action"
+                                }
+                              ]
+                            ]
+                          ]
+                        },
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "New Form Attributes",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ":"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "placeholder",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Specifies a short hint inside an input field."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "required",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Makes the field mandatory."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "pattern",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Specifies a regular expression for input validation."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "type",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": New input types like email, url, tel, date, time, range, color, etc."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "autocomplete",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Enables or disables browser auto-fill suggestions."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "min and max",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Sets the minimum and maximum values for inputs like number or range."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "step",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Defines the interval for numeric inputs."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Global Attributes",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "contenteditable"
+                              }
+                            ],
+                            [
+                              {
+                                "text": "Specifies whether an element's content is editable."
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "draggable"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Specifies whether an element is draggable."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "spellcheck"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Specifies whether spell-checking is enabled for text."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "hidden"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Hides an element from the document."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "data-*"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Allows embedding custom data attributes for an element."
+                                }
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-role-of-doctype-in-html-what-if-you-remove-docty",
+              "title": "What is the role of DOCTYPE in HTML? What if you remove <!DOCTYPE html> from our HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "DOCTYPE declaration tells the browser about the version of HTML in which the current page is written"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "DOCTYPE helps the browser decide how to interpret the code."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "DOCTYPE for HTML5 is case-insensitive"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "If <!DOCTYPE html> is removed then - Browsers can still render the page, but they will not be able to validate the version of HTML, therefore it may lead to some compatibility issues with SEO or debugging."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-difference-between-html-lang-en-and-html-lang-en",
+              "title": "What is the difference between <html lang=”en’> and <html lang=”en-US’>?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "The lang attribute specifies which language is used to write the content of a web page. It is used to set the language for the whole text of the web page."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Difference"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "<html lang=”en’>",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : only specifies the language code of the page meaning en or English is used for all the text on the page."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "<html lang=”en-US’> ",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": specifies the language code of the page followed by the country code which means the US style of English language is used for all the text on the page."
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<html lang=”en-GB’> which means the United Kingdom style of English"
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<html lang=”en-IN’> which means the Indian style of English"
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "difference-between-head-and-body-in-html",
+              "title": "Difference between head and body in HTML?",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "<!DOCTYPE html>\n<html lang=\"en\">\n   <head>\n       <meta charset=\"UTF-8\" />\n       <link rel=\"stylesheet\" href=\"style.css\" />\n       <title>Document</title>\n   </head>\n   <body>\n       <h1></h1>\n       <p></p>\n       <img src=\"image.jpeg\" alt=\"\">\n       <script src=\"app.js\"></script>\n   </body>\n</html>",
+                  "lang": "html"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "head",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "In the head element, meta-information (information about the document) is placed - <title>, <meta>, <link>, <style>, <base>, <script>,"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "body",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "In the body element, actual content of HTML web page is placed. - <div>, <h1>, <img>, <a>"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "how-can-you-apply-js-in-your-html-where-to-place-js-link-ref",
+              "title": "How can you apply JS in your HTML? / Where to place JS link reference?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Scripts can be placed inside the body, the head section of an HTML page, inside both head and body, or can be added externally."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "JavaScript in head",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "If JS functions are not manipulating HTML elements then you can place it inside the head section."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "JavaScript in the body",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "If JS functions are manipulating HTML elements then place the JS reference link at the end of the body section - because head will load before the body. So till the control reaches the reference link, all the elements will be loaded."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "External JavaScript:",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "JavaScript can also be used as external files. JavaScript files have file extension .js . To use an external script put the name of the script file in the src attribute of a script tag. External scripts cannot contain script tags."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-title-tag-in-html-what-are-the-4-advantages-of-t",
+              "title": "What is the <title> tag in HTML? What are the 4 advantages of <title> tag?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<title> tag is used to define the title of the web page"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Advantages",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Window title",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : <title> element text is displayed in the tab of the browser."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Important for SEO",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : Search engines use the title as the main heading for search results."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Bookmarks",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : <title> tag is used as the default name for the bookmarks"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Social Media Sharing",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : <title> tag is used as the default title in the shared post."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-meta-tags-what-are-the-5-types-of-meta-tags",
+              "title": "What are Meta Tags? What are the 5 types of Meta tags?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Meta tags in HTML are elements used to provide metadata or additional information about HTML Document."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "meta tag is an empty element because it only has an opening tag and no closing tag, but it carries information within its attributes."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "meta tag doesn’t affect the physical appearance of the document."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<meta> tags are added to our HTML document for the purpose of Search Engine Optimisation."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "   <head>\n       <meta charset=\"UTF-8\" />\n       <meta name=\"viewport\" content=\"width = device-width initial-scale = 1.0\" />\n       <meta name=\"description\" content=\"HTML interview preparation\" />\n       <meta name=\"keyword\" content=\"HTML, CSS, JavaScript, React.js\" />\n       <meta name=\"author\" content=\"Omkesh Jadhav\" />\n       <title>Document</title>\n   </head>",
+                          "lang": "html"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "5 types of meta tags",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "charset",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - charset=”UTF-8” attribute ensures the characters from different languages are displayed correctly in the browser."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "viewport",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - Crucial for responsive web designs for various screen sizes."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "description",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - Provides the description about the content of the webpage - Used by search engines for search results"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "keywords",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - Used to be important for SEO but now less important"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "author",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - Specify the author of the document."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "how-are-comments-added-in-html",
+              "title": "How are comments added in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<!-- content -->"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-html-elements-and-html-tags-what-is-the-difference",
+              "title": "What are HTML Elements and HTML tags? What is the difference between Element & Tag?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "HTML elements",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "HTML elements are the building blocks of a web page."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Elements generally consist of a start tag, content, and an end tag."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "HTML tags",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Tags are the starting and ending parts of an HTML element."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "They begin with < symbol and end with > symbol. Whatever is written inside < and > are called tags."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Difference between element and tags",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "HTML Element",
+                                "bold": true
+                              }
+                            ],
+                            [
+                              {
+                                "text": "HTML Tag",
+                                "bold": true
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "Collection of a start tag, end tag, and its attributes."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Either opening or closing is used to mark the start or end of an element."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "Hold the content."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Used to hold the HTML element."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "Whatever is written within an HTML tag are HTML elements."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Starts with < and ends with >."
+                                }
+                              ]
+                            ]
+                          ]
+                        },
+                        {
+                          "type": "image",
+                          "src": "/notes/html/image4.png",
+                          "width": 602,
+                          "height": 345
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-roles-and-uses-of-the-div-element-in-html",
+              "title": "What are the roles and uses of the <div> element in HTML?*",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<div> element in HTML is a container that is used to group and structure the content of the web page."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Uses of <div> element"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Grouping and structuring content",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " / related elements"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Styling",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " and layout"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Scripting",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - JS target <div> to manipulate the content"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-difference-between-div-and-span-element",
+              "title": "What is the difference between <div> and <span> element?",
+              "blocks": [
+                {
+                  "type": "table",
+                  "header": [
+                    [
+                      {
+                        "text": "<div>",
+                        "bold": true
+                      }
+                    ],
+                    [
+                      {
+                        "text": "<span>",
+                        "bold": true
+                      }
+                    ]
+                  ],
+                  "rows": [
+                    [
+                      [
+                        {
+                          "text": "<div> is a block level element"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "<span> is an inline element"
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "<div> element is a container used to group and structure the content of the web page"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "<span> element is an inline container used to apply styles or scripting to a specific section of text or content."
+                        }
+                      ]
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-role-of-p-a-br-hr-em-img-input-button",
+              "title": "What is the role of <p>, <a>, <br>, <hr>, <em>, <img>, <input> & <button>",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<p> : Paragraph - Defines a paragraph of single or multi-line text"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<a> : Anchor - Creates hyperlink. href attribute specifies the URL and content is text of hyperlink"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<br> : Inserts a line break"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<hr> : Creates horizontal line break"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<em> : Emphasises text displayed in italics"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<img> : Embeds an image. Src attribute specifies the image file and alt provides alternative text."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<input> : Creates an input field"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<button> : Creates a clickable button."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-role-of-header-main-section-footer-address-eleme",
+              "title": "What is the role of header, main, section, footer & address elements in HTML?",
+              "blocks": [
+                {
+                  "type": "code",
+                  "code": "   <body>\n       <header>\n           <h1>Website Header</h1>\n       </header>\n       <main>\n           <section>\n               <h1>Section 1</h1>\n           </section>\n           <section>\n               <h1>Section 2</h1>\n           </section>\n       </main>\n       <footer>\n           <address>India</address>\n       </footer>\n   </body>",
+                  "lang": "html"
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<header>, <main>, <section>, <footer>, <address> are the semantic elements, used to define the layouts and structure of a webpage in a meaningful and organized way."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<header> : COntains the header content of the webpage"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<main> : contains the main content of the webpage"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<section> :"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<footer> : Contains the group related content"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<address> : Provides contact information"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-anchor-tag-a-in-html",
+              "title": "What is anchor tag <a> in HTML ?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<a> tag (anchor tag) in HTML is used to create a hyperlink on the webpage."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "This hyperlink is used to link the webpage to other web pages."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "It’s either used to provide an absolute reference or a relative reference as its “href” value."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-role-of-heading-tags-in-html-how-does-it-impact",
+              "title": "What is the role of Heading tags in HTML? How does it impact SEO?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Heading tags are used to define the headings of section within a webpage."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "There are 6 levels of headings defined by HTML. These six heading elements are H1, H2, H3, H4, H5, and H6; with H1 being at the highest level and H6 at the least."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Importance",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "SEO",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : Search Engines use headings to understand the importance of the content."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Organization and readability",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : Organize the content in a better way, making it easier for users to understand the organization of the webpage"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Styling and layout",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : Same CSS can be applied to all h1 tags creating consistent layouts."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-difference-between-section-article-elements",
+              "title": "What is the difference between <section> & <article> elements?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<section> element is a generic container used to group related content together."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<article> elements represent self-contained or independent piece of content with a title and content"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "e.g. A blog post, a news article, a forum post etc."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "   <body>\n       <section>\n           <h1>Mobile Section</h1>\n           <p>Samsung, OnePlus, Moto</p>\n       </section>\n       <section>\n           <h1>Books Section</h1>\n           <p>Academic, Fiction, Non-Fiction</p>\n       </section>\n\n       <article>\n           <h1>Festival Sell</h1>\n           <p>10% discount on all products</p>\n           <footer>\n               Terms and Conditions\n           </footer>\n       </artcile>\n   </body>",
+                          "lang": "html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-root-parent-child-nested-elements",
+              "title": "What are Root, Parent, Child & Nested elements?*",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Root",
+                          "bold": true
+                        },
+                        {
+                          "text": " element is the highest level element in the hierarchy of an HTML document.In HTML5, <html> is the root element."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Parent element",
+                          "bold": true
+                        },
+                        {
+                          "text": " is an element that contains other child elements."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Child or nested elements",
+                          "bold": true
+                        },
+                        {
+                          "text": " are elements that are contained within a parent element. Child and nested elements are the same."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-empty-void-elements",
+              "title": "What are Empty / Void Elements?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Elements that only have start tags and do not contain any content within it"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Empty elements are elements that don't need content between its opening and closing tags."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Empty elements are also called self-closing or void elements."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example : <img/>, <input/>, <br/>, <hr/>, <meta/>, <link>, <base>, <col>, <embed>, <area>, <param>"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "*** Opposite of empty tags is Container tags - Container tags have opening tag, content and closing tag"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-semantic-elements-in-html",
+              "title": "What are Semantic Elements in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Semantic Elements are elements that carry "
+                        },
+                        {
+                          "text": "meaningful information",
+                          "bold": true
+                        },
+                        {
+                          "text": " about the content within them, both to the browser and developers."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "These elements have meaningful names which tell about the type of content, making the structure of a webpage more accessible and easier to understand."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Structural Elements:",
+                                  "bold": true
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<header>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Used for page or header section."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<footer>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Used for page or footer section."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<main>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Represents the main content of the document."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<section>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Groups related content."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Content Elements",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ":"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<article>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Represents self-contained content."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<aside>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Represents related content, like a sidebar."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<nav>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Contains navigation links."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<figure>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": " and "
+                                        },
+                                        {
+                                          "text": "<figcaption>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Used for images with captions."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Text Elements",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ":"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<mark>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Highlights text."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<time>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Represents a specific date or time."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "<cite>",
+                                          "bold": true
+                                        },
+                                        {
+                                          "text": ": Represents the title of a work."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Non-Semantic Elements",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Non-semantic elements like <div> and <span> do not provide meaningful information about their content:"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Advantages of Using Semantic Elements",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Improves Readability - ",
+                                  "bold": true
+                                },
+                                {
+                                  "text": "Semantic elements make the HTML code easier to read and maintain for developers."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "SEO Benefits - ",
+                                  "bold": true
+                                },
+                                {
+                                  "text": "Search engines use semantic elements to understand the structure and content of a webpage, improving the chances of better indexing and ranking."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Enhances Accessibility - ",
+                                  "bold": true
+                                },
+                                {
+                                  "text": "provide better support for screen readers, helping users with disabilities navigate the webpage effectively."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Consistency Across Browsers",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - Browsers can better interpret semantic tags, ensuring consistent rendering and behavior."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Easier Maintenance",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " - Semantic elements make it clear what a section of the code is meant for, simplifying updates or changes to the codebase."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "are-b-and-strong-tags-same-if-not-then-why",
+              "title": "Are <b> and <strong> tags same? If not, then why?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<strong> tag"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "used in formatting HTML texts."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "used to show the importance of the text by making it bold or highlighting it semantically."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<b> or bold tag"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Also used in formatting HTML texts."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "text written under the <b> tag makes the text bold presentationally to draw attention."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Difference : By default, the visual result is the same but the main difference is"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "strong tag semantically emphasizes the important word or section of words"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "bold tag is just offset text conventionally styled in bold."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-difference-between-em-and-i-tags",
+              "title": "What is the difference between <em> and <i> tags?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Both <em> and <i> tags"
+                        },
+                        {
+                          "text": " ",
+                          "bold": true
+                        },
+                        {
+                          "text": "are used to display HTML texts in italics."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Difference"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "<em> tag semantically emphasizes the important word or section of words - Recognized by screen readers as emphasis"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "<i> tag  just offset text conventionally styled in italic - Generally ignored by screen readers"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "can-html-tags-be-written-in-uppercase",
+              "title": "Can HTML tags be written in Uppercase?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Yes, HTML tags are not case sensitive. So, they can be written in uppercase, lowercase or combination of both."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "But as per convention, always use lowercase."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-differences-between-block-level-inline-elements",
+              "title": "What are the differences between Block-Level & Inline Elements?*",
+              "blocks": [
+                {
+                  "type": "table",
+                  "header": [
+                    [
+                      {
+                        "text": "Block elements",
+                        "bold": true
+                      }
+                    ],
+                    [
+                      {
+                        "text": "Inline elements",
+                        "bold": true
+                      }
+                    ]
+                  ],
+                  "rows": [
+                    [
+                      [
+                        {
+                          "text": "Take up full width available (Whole Block)"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Take up only necessary width"
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "Start from new line"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Do not start from new line - Start in existing line"
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "Height and width for block elements can be set."
+                        }
+                      ],
+                      [
+                        {
+                          "text": "Height and width for inline elements cannot be set. - Exception <img>"
+                        }
+                      ]
+                    ],
+                    [
+                      [
+                        {
+                          "text": "<div>, <p>, <h1>, <ul>, <ol>, <li>, <header>, <footer>, <section>, <nav>, <forn>"
+                        }
+                      ],
+                      [
+                        {
+                          "text": "<span>, <img>, <a>, <strong>, <em>, <input>, <br>, <label>"
+                        }
+                      ]
+                    ]
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "how-to-change-an-inline-element-into-a-block-level-element",
+              "title": "How to change an inline element into a block-level element?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "by using the display property having its value as “block”"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "display = block"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-html-attributes-what-are-the-types-of-html-attribut",
+              "title": "What are HTML Attributes? What are the Types of HTML attributes?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "An attribute is used to provide extra information about an element."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Types of HTML attributes :"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Global Attributes",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : Common and applicable to all the elements"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "e.g. : id, class, style, data-*"
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Specific Attributes",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " : Specific to the elements"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "e.g. src, href, type, value, placeholder, readonly"
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-id-style-class-attributes-of-an-element-when-to",
+              "title": "What are the Id, Style & Class attributes of an element? When to use what?*",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "id",
+                          "bold": true
+                        },
+                        {
+                          "text": " attribute is used to uniquely identify an element - Primary purpose of id attribute is to allow JS and CSS to target and manipulate a specific element."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "class",
+                          "bold": true
+                        },
+                        {
+                          "text": " attribute is used to group together multiple elements that share common styles."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "style",
+                          "bold": true
+                        },
+                        {
+                          "text": " attribute allows to apply inline style to the individual element."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-will-happen-if-two-elements-have-the-same-ids",
+              "title": "What will happen if two elements have the same ids?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "In the browser there will be no direct impact, but it will be considered as invalid html."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Invalid html means it can lead to unexpected behaviour in web pages."
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "e.g. Problems can occur is CSS styling and JS interactions."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "how-to-specify-multiple-classes-for-a-single-element-what-is",
+              "title": "How to specify Multiple Classes for a single element? What is the style precedence ?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "To specify multiple classes for an HTML element, simply add a space-separated list of class names within the class attribute."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "In case of multiple classes with the same style attribute, style defined in the last class will take precedence."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-data-attributes-in-html-how-can-we-access-data-attr",
+              "title": "What are Data Attributes in HTML? How can we access data attributes in JS ?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Data attributes in HTML provide a way to add custom data attributes to include additional information in elements."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Data attributes are specified using "
+                        },
+                        {
+                          "text": "data-",
+                          "bold": true
+                        },
+                        {
+                          "text": " prefix."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Data attributes can be accessed by the "
+                        },
+                        {
+                          "text": "dataset",
+                          "bold": true
+                        },
+                        {
+                          "text": " property in JS."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "<body>\n     <div id=\"div1\" data-info=\"info from dataset\">\n         Data attributes\n     </div>\n\n     <script>\n        const info = document.getElementById(\"div1\").dataset.info\n        console.log(info);  // info from dataset\n     </script>\n</body>",
+                          "lang": "javascript"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-5-types-of-links-in-html",
+              "title": "What are the 5 Types of Links in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Anchor link (<a>) :",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "<a> is used to navigate from one page to another."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example : "
+                                },
+                                {
+                                  "text": "<a href=\"https:// www.abc.com\"></a>",
+                                  "code": true
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "External Resource link (<link>) :",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "<link> is used in the <head> section to connect an external to external resources like a stylesheet or icon"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example : "
+                                },
+                                {
+                                  "text": "<link rel=\"stylesheet\" href=\"style.css\">",
+                                  "code": true
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Image link (<img>) :",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "<img> is used to create a clickable image that leads to another webpage."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "<a href=\"https:// www.abc.com\">\n    <img src=\"abc.jpeg\" alt=\"abc\">\n</a>",
+                                  "lang": "html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Bookmark link (named anchor) :",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Bookmark link (named anchor) points to a specific location within a web page using a named anchor."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "<a href=\"#section1\"> Go To Section 1</a>\n\n<div id=\"section1\"></div>\n<p>Content of section 1</p>",
+                                  "lang": "html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Email link :",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Email link creates a clickable link that opens the user’s default email client with a pre-filled email-address."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example : "
+                                },
+                                {
+                                  "text": "<a href=\"mailto:xyz@abc.com\"> Click to mail me</a>",
+                                  "code": true
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-use-of-the-target-attribute-in-the-a-tag",
+              "title": "What is the use of the target attribute in the <a> tag?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "target attribute in the <a> tag is used to specify the window or a frame where the linked document is loaded."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Syntax :"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "<a href=\"\" target=\"_blank | _self | _top | _parent\">Google</a>",
+                          "lang": "html"
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Attribute Values"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "_blank:",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " It opens the link in a new window."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "_self:",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " It opens the linked document in the same frame."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "_parent:",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " It opens the linked document in the parent frameset."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "_top: ",
+                                  "bold": true
+                                },
+                                {
+                                  "text": "It opens the linked document in the full body of the window."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "framename:",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " It opens the linked document in the named frame."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-difference-between-absolute-relative-urls",
+              "title": "What is the difference between Absolute & Relative URLs?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Absolute URLs",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Absolute URLs provide the complete web address of a resource."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Absolute URLs are typically used to link resources on different external websites."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "<a href=\"https://www.google.com\"> Google</a>\n<a href=\"mailto:xyz@abc.com\"> Click to mail me</a>",
+                                  "lang": "html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Relative URLs",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Relative URLs specify the location of a resource in relation to the current document. - Full URL is not required."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "They are used when linking to resources within the same website."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "<a href=\"../page.html\"> Google</a>\n<img src=\"../src/assets/image.jpeg\" alt=\"\">\n<link rel=\"stylesheet\" href=\"style.css\">\n<script src=\"../src/app.jsx\"></script>",
+                                  "lang": "html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-purpose-of-the-nav-element-in-html",
+              "title": "What is the purpose of the <nav> element in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<nav> element in HTML is used to define a section of a web page that contains navigation links."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<nav> element provides a clear navigation structure and keeps navigation separate from other body content. This is helpful from the SEO perspective."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "<nav>\n     <ul>\n         <li><a href=\"home.html\">Home</a></li>\n         <li><a href=\"about.html\">About</a></li>\n         <li><a href=\"service.html\">Services</a></li>\n         <li><a href=\"contact.html\">Contact</a></li>\n     </ul>\n</nav>",
+                          "lang": "html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-a-fragment-identifier-in-a-url",
+              "title": "What is a Fragment Identifier in a URL?*",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "A fragment identifier is used to navigate to a specific section of the same web page."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Fragment identifier is preceded by # symbol"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "<a href=\"#section1\"> Go To Section 1</a> <br/>\n<a href=\"#section2\"> Go To Section 2</a>\n\n<div id=\"section1\">Section 1</div>\n<p>Content of section 1</p>\n\n<div id=\"section2\">Section 2</div>\n<p>Content of section 2</p>",
+                          "lang": "html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-purpose-of-the-base-element-in-html",
+              "title": "What is the purpose of the <base> element in HTML ?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<base> element is used to specify a base URL for relative URLs within a document."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<base> element is typically placed in the < head > section."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "   <head>\n       <title>Document</title>\n       <link rel=\"stylesheet\" href=\"style.css\">\n       <base href=\"https://www.baseURL.com\">\n   </head>\n   <body>\n       <a href=\"relativeURL1\"> Relative URL 1</a> <br/>\n       <a href=\"relativeURL2\"> Relative URL 2</a>\n   </body>",
+                          "lang": "html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-use-of-alt-attribute-in-img",
+              "title": "What is the use of alt attribute in <img>?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "alt attribute in <img> is used to specify the alternate text for an image."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "It is useful when the image is not displayed. It is used to give alternative information for an image."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-different-types-of-lists-in-html",
+              "title": "What are the different Types of Lists in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Ordered List",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Items are numbered or ordered in a specific sequence"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Unordered List",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "List where items are marked with bullets."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Description / Definition List",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Display a list of terms along with their corresponding description."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Example"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "code",
+                                  "code": "<dl>\n    <dt>Term 1</dt>\n    <dd>Description of Term 1</dd>\n    <dt>Term 2</dt>\n    <dd>Description of Term 2</dd>\n</dl>",
+                                  "lang": "html"
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-a-nested-list-in-html",
+              "title": "What is a Nested List in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Nested list is a list that is placed within another list item."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "      <h1>Technologies</h1>\n       <ul>\n           <li>\n               Frontend\n               <ul>\n                   <li>HTML</li>\n                   <li>JavaScript</li>\n                   <li>React</li>\n               </ul>\n           </li>\n           <li>Backend\n               <ul>\n                   <li>Python</li>\n                   <li>Node</li>\n                   <li>Java</li>\n               </ul>\n           </li>\n       </ul>",
+                          "lang": "html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-html-tags-used-to-display-a-table",
+              "title": "What are the HTML tags used to display a table?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<table>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define a table - Container for whole table"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<tr>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define a row in a table."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<th>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define a header cell in a table."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<td>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define a cell in a table."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<caption>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define the table caption."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<colgroup>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define a group of one or more columns in a table for formatting."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<col>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used with <colgroup> element to specify column properties for each column."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<tbody>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to define a group of body content in a table."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<thead>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to group the header content in a table."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<tfooter>:",
+                          "bold": true
+                        },
+                        {
+                          "text": " It is used to group the footer content in a table."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "code",
+                          "code": "<table border=\"1\">\n    <caption><b>Student Information</b></caption>\n        <tr>\n           <th rowspan=\"6\">Info</th>\n           <th rowspan=\"2\">Name</th>\n           <th colspan=\"2\">Address</th>\n        </tr>\n\n        <tr>\n           <th>City</th>\n           <th>House</th>\n        </tr>\n\n        <tr>\n           <td>A</td>\n           <td>Delhi</td>\n           <td>1</td>\n        </tr>\n\n        <tr>\n           <td>B</td>\n           <td>Mumbai</td>\n           <td>2</td>\n        </tr>\n\n        <tr>\n            <td>C</td>\n            <td>Kolkata</td>\n            <td>3</td>\n        </tr>\n\n        <tr>\n            <td>D</td>\n            <td>Pune</td>\n            <td>4</td>\n        </tr>\n</table>",
+                          "lang": "html"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-rowspan-and-colspan-attribute-in-html",
+              "title": "What is the rowspan and colspan attribute in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "rowspan attribute is used to merge multiple cells vertically into a single cell."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "colspan attribute is used to merge multiple cells horizontally into a single cell."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-advantages-disadvantages-of-table",
+              "title": "What are advantages & disadvantages of table?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Advantage",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Tool for styling and displaying structured data"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Disadvantage",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Tables are not responsive - Tables with multiple column structure are not good for mobile devices."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-is-the-best-way-to-add-a-border-to-a-table-column-and-c",
+              "title": "What is the best way to add a border to a table, column and cell?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Setting the common style for table, tr, th and td, then all the multiple tables in your webpage will follow consistent and same style and format."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Example"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "codeGroup",
+                          "blocks": []
+                        },
+                        {
+                          "type": "codeGroup",
+                          "blocks": [
+                            {
+                              "type": "code",
+                              "code": "<table border=\"1\">\n    <tr>\n       <th>Header 1</th>\n       <th>Header 2</th>\n    </tr>\n    <tr>\n       <td>Row 1, Col 1</td>\n       <td>Row 1, Col 2</td>\n    </tr>\n    <tr>\n       <td>Row 2, col 1</td>\n       <td>Row 2, col 2</td>\n    </tr>\n</table>",
+                              "lang": "html"
+                            },
+                            {
+                              "type": "code",
+                              "code": "<style>\n   table{\n         border: 0.5px solid black;\n         width: 25%;\n         }\n\n   th, td{\n          border: 1px dotted red;\n          padding: 5px;\n          text-align: center;\n          }\n</style>",
+                              "lang": "html"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-the-media-element-tags-introduced-by-html5",
+              "title": "What are the media element tags introduced by HTML5?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "HTML5 introduced 5 most popular media element tags that are supported by the browsers, which are described below"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "<audio>",
+                          "bold": true
+                        },
+                        {
+                          "text": ": It is an inline element that is used to embed sound files into a web page."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<video>",
+                          "bold": true
+                        },
+                        {
+                          "text": ":  It is used to embed video files into a web page."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<source>",
+                          "bold": true
+                        },
+                        {
+                          "text": ": It is used to attach multimedia files like audio, video, and pictures."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<embed>",
+                          "bold": true
+                        },
+                        {
+                          "text": ": It is used for embedding external applications which are generally multimedia content like audio or video into an HTML document."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "<track>",
+                          "bold": true
+                        },
+                        {
+                          "text": ":  It specifies text tracks for media components audio and video."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-html-entities",
+              "title": "What are HTML entities?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "To display the reserved characters as text in HTML, HTML entity is used."
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "browser parse reserved characters as HTML code."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "HTML entity begins with an ampersand (&) and ends with a semicolon (;)."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "HTML entities are also used to display the characters which are not present in the basic keyboard."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "For Example:"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "‘<‘ is a reserved keyword in HTML"
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "£, ¥, €, © are not present in basic keyboard"
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "HTML provides some Entity names and Entity numbers to use these symbols."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "how-can-we-create-a-nested-webpage-in-html",
+              "title": "How can we create a nested webpage in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "When the content of one completely different webpage is embedded into another webpage, it is called a nested webpage."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "The nested webpage can be created using the following 2 methods:"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "<iframe> tag:",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " “iframe” tag defines a rectangular region within the document in which the browser can display a separate document, including scrollbars and borders."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "<embed> tag:",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " <embed> tag is used for embedding external applications which are generally multimedia content like audio or video into an HTML document."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-are-logical-and-physical-tags-in-html",
+              "title": "What are logical and physical tags in HTML?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "logical tags",
+                          "bold": true
+                        },
+                        {
+                          "text": " and "
+                        },
+                        {
+                          "text": "physical tags",
+                          "bold": true
+                        },
+                        {
+                          "text": " are two types of tags that serve different purposes, mainly related to how they provide meaning and appearance to content."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Difference",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "table",
+                          "header": [
+                            [
+                              {
+                                "text": "Logical",
+                                "bold": true
+                              }
+                            ],
+                            [
+                              {
+                                "text": "Physical",
+                                "bold": true
+                              }
+                            ]
+                          ],
+                          "rows": [
+                            [
+                              [
+                                {
+                                  "text": "Logical tags define the "
+                                },
+                                {
+                                  "text": "meaning",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " or "
+                                },
+                                {
+                                  "text": "structure",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " of the content without focusing on how it looks."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Physical tags directly define the "
+                                },
+                                {
+                                  "text": "appearance",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " or "
+                                },
+                                {
+                                  "text": "presentation",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " of the content, focusing on how it looks rather than its meaning."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "describe the intent or role of the content (semantic meaning)"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "emphasize visual styling, often without semantic value"
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "Browsers provide default styling for these tags (e.g., "
+                                },
+                                {
+                                  "text": "<em>",
+                                  "code": true
+                                },
+                                {
+                                  "text": " usually italicizes text), but the appearance can be overridden using CSS."
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "appearance is hard-coded into the tag itself, though it can still be customized with CSS."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "Enhances accessibility and SEO"
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "Does not add semantic value, which may reduce accessibility and SEO effectiveness."
+                                }
+                              ]
+                            ],
+                            [
+                              [
+                                {
+                                  "text": "<em>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<strong>, <dfn>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<cite>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<abbr>",
+                                  "code": true
+                                }
+                              ],
+                              [
+                                {
+                                  "text": "<b>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<i>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<u>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<s>",
+                                  "code": true
+                                },
+                                {
+                                  "text": ", "
+                                },
+                                {
+                                  "text": "<big>",
+                                  "code": true
+                                }
+                              ]
+                            ]
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Use "
+                        },
+                        {
+                          "text": "logical tags",
+                          "bold": true
+                        },
+                        {
+                          "text": " whenever possible for meaningful and accessible content."
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "what-do-you-mean-by-manifest-file-in-html5",
+              "title": "What do you mean by manifest file in HTML5?",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "manifest file is a text file that tells the browser to cache certain files or webpages so that they can be used even in offline mode."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "HTML5 cache webpages by specifying manifest attribute in <html> tag."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "All the web pages that contain manifest attributes or are specified in the manifest file will be cached whenever a user visits that page."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "MANIFEST keyword and contains three sections:"
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "CACHE",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": This section lists all the resources including webpages, CSS stylesheets, JavaScript files, and images that will be cached immediately after their first download."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "NETWORK",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": This section lists all the resources that will never be cached - can’t be used in offline mode and always require a connection to the server."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "FALLBACK",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": This section lists the fallback resources that will be used in case a page is not accessible."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "explain-web-worker-in-html",
+              "title": "Explain Web Worker in HTML.",
+              "blocks": [
+                {
+                  "type": "list",
+                  "ordered": false,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "Web Worker",
+                          "bold": true
+                        },
+                        {
+                          "text": " in HTML is a feature of the Web API that allows you to run JavaScript in the background, separate from the main thread of a web application."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "This helps improve the performance and responsiveness of your application by offloading resource-intensive tasks (like calculations, data processing, or API calls) to a worker thread."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Key Features of Web Workers",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Parallel Execution",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": Runs tasks in the background, independent of the main UI thread."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Non-blocking",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": The main thread remains free for UI updates and user interactions."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Thread Communication",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": Communicates with the main thread using the "
+                                },
+                                {
+                                  "text": "postMessage",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " and "
+                                },
+                                {
+                                  "text": "onmessage",
+                                  "bold": true
+                                },
+                                {
+                                  "text": " methods."
+                                }
+                              ],
+                              "children": []
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Sandboxed Environment",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ": Workers cannot directly access the DOM or certain browser APIs, ensuring thread safety."
+                                }
+                              ],
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Types of Web Workers",
+                          "bold": true
+                        }
+                      ],
+                      "children": [
+                        {
+                          "type": "list",
+                          "ordered": false,
+                          "items": [
+                            {
+                              "content": [
+                                {
+                                  "text": "Dedicated Workers",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ":"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "Used by a single script."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "e.g. : One worker handling a specific task for a single web page."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Shared Workers",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ":"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "Can be shared across multiple scripts and browser tabs or windows."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "e.g. : A worker managing a shared state between multiple tabs."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "content": [
+                                {
+                                  "text": "Service Workers",
+                                  "bold": true
+                                },
+                                {
+                                  "text": ":"
+                                }
+                              ],
+                              "children": [
+                                {
+                                  "type": "list",
+                                  "ordered": false,
+                                  "items": [
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "Primarily used for intercepting network requests and caching resources for offline use."
+                                        }
+                                      ],
+                                      "children": []
+                                    },
+                                    {
+                                      "content": [
+                                        {
+                                          "text": "e.g. Progressive Web Apps (PWAs)."
+                                        }
+                                      ],
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "paragraph",
+                  "content": [
+                    {
+                      "text": "// HTML Forms",
+                      "bold": true
+                    }
+                  ]
+                },
+                {
+                  "type": "list",
+                  "ordered": true,
+                  "items": [
+                    {
+                      "content": [
+                        {
+                          "text": "What are the various formatting tags in HTML?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Describe HTML layout structure."
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "How to specify the link in HTML and explain the target attribute?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Difference Between Link Tag And Anchor Tag?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "Define Multipart form data?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "How is Cell Padding different from Cell Spacing?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "In how many ways can we position an HTML element?Or What are the permissible values of the position attribute?"
+                        }
+                      ],
+                      "children": []
+                    },
+                    {
+                      "content": [
+                        {
+                          "text": "In how many ways can you display HTML elements?"
+                        }
+                      ],
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
