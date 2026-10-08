@@ -27,7 +27,7 @@ export function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="px-6 py-32 md:px-12 lg:px-20"
+      className="px-6 pb-32 pt-20 md:px-12 lg:px-20"
     >
       <div className="mx-auto max-w-7xl">
         <div className="flex flex-col gap-8 lg:flex-row lg:gap-12">

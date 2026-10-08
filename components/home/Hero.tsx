@@ -51,7 +51,7 @@ export function Hero() {
     <section
       id="home"
       ref={rootRef}
-      className="relative flex min-h-svh items-center overflow-hidden px-6 pt-28 md:px-12 lg:px-20"
+      className="relative flex min-h-svh items-center overflow-hidden px-6 pb-24 pt-24 md:px-12 md:pb-44 lg:px-20"
     >
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Left: copy */}
@@ -122,9 +122,9 @@ export function Hero() {
         </div>
       </div>
 
-      {/* scroll cue */}
+      {/* scroll cue — sits above the fixed bottom dock */}
       <div
-        className="absolute bottom-10 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs md:flex"
+        className="absolute bottom-28 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs md:flex"
         style={{ color: "var(--color-ink-soft)" }}
       >
         <span>Scroll</span>
