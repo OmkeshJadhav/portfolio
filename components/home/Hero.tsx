@@ -41,11 +41,19 @@ export function Hero() {
           "[data-hero-illustration]",
           { opacity: 0, scale: 0.94, duration: reducedMotion ? 0 : 0.9, ease: "power2.out" },
           "-=0.6"
-        );
+        )
+        .from("[data-hero-cue]", { opacity: 0, y: -8, duration: reducedMotion ? 0 : 0.6 }, "-=0.3");
     }, rootRef);
 
     return () => ctx.revert();
   }, [reducedMotion]);
+
+  const scrollToAbout = () => {
+    const about = document.getElementById("about");
+    if (!about) return;
+    if (window.__lenis) window.__lenis.scrollTo(about, { duration: 1.1 });
+    else about.scrollIntoView({ behavior: reducedMotion ? "auto" : "smooth" });
+  };
 
   return (
     <section
@@ -123,13 +131,26 @@ export function Hero() {
       </div>
 
       {/* scroll cue — sits above the fixed bottom dock */}
-      <div
-        className="absolute bottom-28 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 text-xs md:flex"
-        style={{ color: "var(--color-ink-soft)" }}
+      <button
+        type="button"
+        data-hero-cue
+        data-cursor="pointer"
+        onClick={scrollToAbout}
+        aria-label="Scroll to About section"
+        className="group absolute bottom-28 left-1/2 hidden -translate-x-1/2 flex-col items-center gap-2 md:flex"
       >
-        <span>Scroll</span>
-        <span className="h-8 w-px animate-pulse" style={{ backgroundColor: "var(--color-border)" }} />
-      </div>
+        <span
+          aria-hidden
+          className="flex h-9 w-[22px] justify-center rounded-full border-[1.5px] border-[color:color-mix(in_srgb,var(--color-ink)_35%,transparent)] bg-[color:color-mix(in_srgb,var(--color-card)_70%,transparent)] pt-1.5 shadow-sm backdrop-blur-sm transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[color:var(--color-accent)] group-hover:shadow-[0_8px_20px_-8px_var(--color-accent)]"
+        >
+          <span className="hero-scroll-wheel h-2 w-[3px] rounded-full" style={{ backgroundColor: "var(--color-accent)" }} />
+        </span>
+        <span
+          className="text-[10px] font-medium uppercase tracking-[0.25em] text-[color:var(--color-ink-soft)] transition-colors duration-300 group-hover:text-[color:var(--color-accent)]"
+        >
+          Scroll
+        </span>
+      </button>
     </section>
   );
 }

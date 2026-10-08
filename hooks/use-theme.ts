@@ -1,15 +1,23 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 
 type Theme = "light" | "dark";
 
-function getInitialTheme(): Theme {
-  if (typeof window === "undefined") return "light";
-  const stored = window.localStorage.getItem("theme");
-  if (stored === "light" || stored === "dark") return stored;
-  return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+const THEME_EVENT = "themechange";
+
+function subscribe(onChange: () => void) {
+  window.addEventListener(THEME_EVENT, onChange);
+  return () => window.removeEventListener(THEME_EVENT, onChange);
 }
+
+// The inline script in app/layout.tsx sets the .dark class before hydration,
+// so the class on <html> is the source of truth on the client.
+const getSnapshot = (): Theme => (document.documentElement.classList.contains("dark") ? "dark" : "light");
+
+// The server can't know the theme; React renders this first, then switches
+// to the client snapshot without a hydration mismatch.
+const getServerSnapshot = (): Theme => "light";
 
 /**
  * Self-contained theme hook. All color values live in CSS custom
@@ -18,14 +26,18 @@ function getInitialTheme(): Theme {
  * needs to be used by the toggle button itself.
  */
 export function useTheme() {
-  const [theme, setTheme] = useState<Theme>(getInitialTheme);
+  const theme = useSyncExternalStore(subscribe, getSnapshot, getServerSnapshot);
 
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", theme === "dark");
-    window.localStorage.setItem("theme", theme);
-  }, [theme]);
-
-  const toggle = () => setTheme((current) => (current === "dark" ? "light" : "dark"));
+  const toggle = () => {
+    const next: Theme = theme === "dark" ? "light" : "dark";
+    document.documentElement.classList.toggle("dark", next === "dark");
+    try {
+      window.localStorage.setItem("theme", next);
+    } catch {
+      // Storage can be unavailable (private mode, blocked site data).
+    }
+    window.dispatchEvent(new Event(THEME_EVENT));
+  };
 
   return { theme, toggle };
 }

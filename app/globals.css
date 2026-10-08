@@ -42,8 +42,11 @@
   --color-border: #232326;
 }
 
-* {
-  border-color: var(--color-border);
+/* In the base layer so Tailwind border-color utilities can override it. */
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
 }
 
 html {
@@ -173,4 +176,30 @@ body {
 [data-note-question] {
   content-visibility: auto;
   contain-intrinsic-size: auto 72px;
+}
+
+/* Hero scroll cue — the mouse wheel dot slides down and fades, on loop */
+@keyframes hero-scroll-wheel {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  70%,
+  100% {
+    transform: translateY(12px);
+    opacity: 0;
+  }
+}
+
+.hero-scroll-wheel {
+  animation: hero-scroll-wheel 1.8s var(--ease-out-soft) infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-scroll-wheel {
+    animation: none;
+  }
 }

@@ -73,12 +73,12 @@ export function BottomDock() {
   };
 
   return (
-    <div className="fixed inset-x-0 bottom-6 z-50 flex justify-center px-4 pb-0 pt-14">
+    <div className="pointer-events-none fixed inset-x-0 bottom-6 z-50 flex justify-center px-4 pb-0 pt-14">
       <div
         ref={containerRef}
         onMouseMove={handleMouseMove}
         onMouseLeave={() => setSizes(null)}
-        className="no-scrollbar flex max-w-full items-end gap-1.5 overflow-x-auto overflow-y-visible rounded-[28px] border px-2.5 py-2.5 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:gap-2 sm:px-3"
+        className="no-scrollbar pointer-events-auto flex max-w-full items-end gap-1.5 overflow-x-auto overflow-y-visible rounded-[28px] border px-2.5 py-2.5 shadow-[0_20px_50px_-12px_rgba(0,0,0,0.18)] backdrop-blur-xl sm:gap-2 sm:px-3"
         style={{
           backgroundColor: "color-mix(in srgb, var(--color-card) 82%, transparent)",
           borderColor: "var(--color-border)",
